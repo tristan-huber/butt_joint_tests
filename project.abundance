@@ -7,15 +7,16 @@
   "ioValues": [
     {
       "name": "materialThickness",
-      "ioValue": 10
+      "ioValue": 0.5,
+      "currentEquation": "0.5"
     }
   ],
   "topLevel": true,
   "allAtoms": [
     {
       "atomType": "Rotate",
-      "x": 0.43033854166666663,
-      "y": 0.17714285714285713,
+      "x": 0.3815104166666667,
+      "y": 0.19142857142857142,
       "uniqueID": "id-1183",
       "ioValues": [
         {
@@ -39,8 +40,8 @@
     },
     {
       "atomType": "Move",
-      "x": 0.5559895833333334,
-      "y": 0.18285714285714286,
+      "x": 0.4765625,
+      "y": 0.20285714285714287,
       "uniqueID": "id-1189",
       "ioValues": [
         {
@@ -53,8 +54,8 @@
         },
         {
           "name": "yDist",
-          "ioValue": 4,
-          "currentEquation": "4"
+          "ioValue": 21.5,
+          "currentEquation": "21.5"
         },
         {
           "name": "zDist",
@@ -71,7 +72,8 @@
       "ioValues": [
         {
           "name": "Number",
-          "ioValue": 4
+          "ioValue": 4,
+          "currentEquation": "4"
         },
         {
           "name": "Geometry",
@@ -79,11 +81,11 @@
         },
         {
           "name": "distX",
-          "ioValue": 11
+          "ioValue": 0
         },
         {
           "name": "distY",
-          "ioValue": 0
+          "ioValue": 8
         },
         {
           "name": "distZ",
@@ -238,11 +240,11 @@
             },
             {
               "name": "distX",
-              "ioValue": 11
+              "ioValue": 0
             },
             {
               "name": "distY",
-              "ioValue": 0
+              "ioValue": 8
             },
             {
               "name": "distZ",
@@ -390,6 +392,39 @@
       "lastReloadedFromGithubAt": 1788457036807
     },
     {
+      "atomType": "Extrude",
+      "x": 0.5358072916666666,
+      "y": 0.24285714285714288,
+      "uniqueID": "id-1254",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 0.5,
+          "currentEquation": "materialThickness"
+        }
+      ]
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.685546875,
+      "y": 0.3057142857142857,
+      "uniqueID": "id-1258",
+      "ioValues": [
+        {
+          "name": "retain",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "remove",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
       "atomType": "Output",
       "x": 0.98,
       "y": 0.5,
@@ -431,7 +466,7 @@
         },
         {
           "name": "height",
-          "ioValue": 10,
+          "ioValue": 0.5,
           "currentEquation": "0.25"
         }
       ]
@@ -445,8 +480,8 @@
     },
     {
       "atomType": "Move",
-      "x": 0.33854166666666663,
-      "y": 0.8828571428571428,
+      "x": 0.28645833333333337,
+      "y": 0.8657142857142858,
       "uniqueID": "id-922",
       "ioValues": [
         {
@@ -460,8 +495,8 @@
         },
         {
           "name": "yDist",
-          "ioValue": 10,
-          "currentEquation": "10"
+          "ioValue": 24,
+          "currentEquation": "24"
         },
         {
           "name": "zDist",
@@ -471,8 +506,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.35872395833333337,
-      "y": 0.13428571428571429,
+      "x": 0.31380208333333337,
+      "y": 0.16285714285714284,
       "uniqueID": "id-996",
       "name": "puzzle_joint",
       "ioValues": [
@@ -2141,11 +2176,6 @@
       "ap2ID": "id-915"
     },
     {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-922",
-      "ap2ID": "id-909"
-    },
-    {
       "ap2Name": "geometry",
       "ap1ID": "id-996",
       "ap2ID": "id-1183"
@@ -2154,6 +2184,26 @@
       "ap2Name": "geometry",
       "ap1ID": "id-1183",
       "ap2ID": "id-1189"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1189",
+      "ap2ID": "id-1254"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-1210",
+      "ap2ID": "id-909"
+    },
+    {
+      "ap2Name": "retain",
+      "ap1ID": "id-1210",
+      "ap2ID": "id-1258"
+    },
+    {
+      "ap2Name": "remove",
+      "ap1ID": "id-1254",
+      "ap2ID": "id-1258"
     }
   ],
   "unitsKey": "Inches",
