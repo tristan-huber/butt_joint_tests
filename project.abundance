@@ -1,13 +1,85 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-908",
-    "name": "butt_joint_tests",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "Inches",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-908",
+  "name": "butt_joint_tests",
+  "ioValues": [
+    {
+      "name": "materialThickness",
+      "ioValue": 10
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "id-909",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.09830729166666666,
+      "y": 0.8457142857142858,
+      "uniqueID": "id-911",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 18,
+          "currentEquation": "18"
+        },
+        {
+          "name": "y length",
+          "ioValue": 6,
+          "currentEquation": "6"
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.19270833333333331,
+      "y": 0.7799999999999999,
+      "uniqueID": "id-915",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 10,
+          "currentEquation": "0.25"
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0.0231,
+      "y": 0.3257142857142857,
+      "uniqueID": "id-919",
+      "name": "materialThickness"
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-911",
+      "ap2ID": "id-915"
+    },
+    {
+      "ap2Name": "height",
+      "ap1ID": "id-919",
+      "ap2ID": "id-915"
+    }
+  ],
+  "unitsKey": "Inches",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
