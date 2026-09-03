@@ -13,7 +13,11 @@
 
  Showcase of three options for butt-joints of flat stock.
 
-Puzzle joint: fast to cut, durable. 
+Puzzle joint: fast to cut, durable.
+
+Dogbone: maximize length b/c joint is incut only. Medium cut time
+
+Stepped Scarf: strong, very slow to cut. 
 
 ![readme](/readmeid-2867.svg?v=ejseuq)
 
