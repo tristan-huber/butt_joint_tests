@@ -11,5 +11,13 @@
 
 
 
- 
+ Showcase of three options for butt-joints of flat stock.
+
+Puzzle joint: fast to cut, durable. 
+
+![readme](/readmeid-2867.svg?v=ejseuq)
+
+
+
+
 
