@@ -341,10 +341,23 @@
     },
     {
       "atomType": "Assembly",
-      "x": 0.6966145833333334,
-      "y": 0.4542857142857143,
+      "x": 0.6393229166666666,
+      "y": 0.2942857142857143,
       "uniqueID": "id-1471",
-      "ioValues": []
+      "ioValues": [
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 3",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 4",
+          "ioValue": null
+        }
+      ]
     },
     {
       "atomType": "Molecule",
@@ -3857,10 +3870,10 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.48489583333333336,
-      "y": 0.6414285714285713,
+      "x": 0.39192708333333337,
+      "y": 0.6799999999999999,
       "uniqueID": "id-2622",
-      "name": "New Molecule",
+      "name": "stepped scarf",
       "ioValues": [
         {
           "name": "shape",
@@ -5270,21 +5283,97 @@
           "uniqueID": "id-2810",
           "name": "shape",
           "type": "geometry"
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.4140625,
+          "y": 0.6457142857142857,
+          "uniqueID": "id-2818",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 2",
+              "ioValue": null
+            }
+          ]
         }
       ],
       "allConnectors": [
         {
-          "ap2Name": "number or geometry",
+          "ap2Name": "Shape 2",
           "ap1ID": "id-2626",
-          "ap2ID": "id-2624"
+          "ap2ID": "id-2818"
         },
         {
           "ap2Name": "shape",
           "ap1ID": "id-2810",
           "ap2ID": "id-2626"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-2810",
+          "ap2ID": "id-2818"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-2818",
+          "ap2ID": "id-2624"
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Move",
+      "x": 0.50390625,
+      "y": 0.18285714285714286,
+      "uniqueID": "id-2823",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 8,
+          "currentEquation": "8"
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.4837239583333333,
+      "y": 0.42857142857142855,
+      "uniqueID": "id-2829",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 16,
+          "currentEquation": "16"
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
     },
     {
       "atomType": "Output",
@@ -5402,6 +5491,31 @@
       "ap2Name": "number or geometry",
       "ap1ID": "id-1210",
       "ap2ID": "id-909"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1476",
+      "ap2ID": "id-2823"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2207",
+      "ap2ID": "id-2829"
+    },
+    {
+      "ap2Name": "Shape 4",
+      "ap1ID": "id-2622",
+      "ap2ID": "id-1471"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-2823",
+      "ap2ID": "id-1471"
+    },
+    {
+      "ap2Name": "Shape 3",
+      "ap1ID": "id-2829",
+      "ap2ID": "id-1471"
     }
   ],
   "unitsKey": "Inches",
