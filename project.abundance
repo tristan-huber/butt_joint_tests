@@ -410,8 +410,8 @@
     },
     {
       "atomType": "Difference",
-      "x": 0.685546875,
-      "y": 0.3057142857142857,
+      "x": 0.70703125,
+      "y": 0.23428571428571426,
       "uniqueID": "id-1258",
       "ioValues": [
         {
@@ -1742,6 +1742,61 @@
       "unitsKey": "MM",
       "fileTypeVersion": 1,
       "lastReloadedFromGithubAt": 1788457036807
+    },
+    {
+      "atomType": "Molecule",
+      "x": 0.20377604166666669,
+      "y": 0.2,
+      "uniqueID": "id-1439",
+      "name": "cutting plane",
+      "ioValues": [
+        {
+          "name": "tolerance",
+          "ioValue": 10
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-1441",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0231,
+          "y": 0.3257142857142857,
+          "uniqueID": "id-1443",
+          "name": "tolerance"
+        },
+        {
+          "atomType": "Rectangle",
+          "x": 0.24088541666666666,
+          "y": 0.48857142857142855,
+          "uniqueID": "id-1446",
+          "ioValues": [
+            {
+              "name": "x length",
+              "ioValue": 10,
+              "currentEquation": "tolerance"
+            },
+            {
+              "name": "y length",
+              "ioValue": 10,
+              "currentEquation": "10"
+            }
+          ]
+        }
+      ],
+      "allConnectors": [],
+      "fileTypeVersion": 1
     },
     {
       "atomType": "Output",
