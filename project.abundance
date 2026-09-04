@@ -6322,12 +6322,17 @@
       "ioValues": [
         {
           "name": "depth",
-          "ioValue": 10
+          "ioValue": 1,
+          "currentEquation": "1"
         },
         {
           "name": "corner_diam",
-          "ioValue": 1.6666666666666667,
-          "currentEquation": "depth / 6"
+          "ioValue": 0.16666666666666666
+        },
+        {
+          "name": "tolerance",
+          "ioValue": 0.1,
+          "currentEquation": "0.1"
         }
       ],
       "topLevel": false,
@@ -6352,7 +6357,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 1.6666666666666667
+              "ioValue": 0.16666666666666666
             }
           ]
         },
@@ -6375,13 +6380,13 @@
             },
             {
               "name": "xDist",
-              "ioValue": -5,
+              "ioValue": -0.5,
               "currentEquation": "-depth / 2"
             },
             {
               "name": "yDist",
-              "ioValue": 10,
-              "currentEquation": "depth"
+              "ioValue": 0.5,
+              "currentEquation": "depth /2"
             },
             {
               "name": "zDist",
@@ -6401,13 +6406,13 @@
             },
             {
               "name": "xDist",
-              "ioValue": 5,
+              "ioValue": 0.5,
               "currentEquation": "depth / 2"
             },
             {
               "name": "yDist",
-              "ioValue": 10,
-              "currentEquation": "depth"
+              "ioValue": 0.5,
+              "currentEquation": "depth / 2"
             },
             {
               "name": "zDist",
@@ -6431,7 +6436,7 @@
             },
             {
               "name": "yDist",
-              "ioValue": -20,
+              "ioValue": -2,
               "currentEquation": "-depth * 2"
             },
             {
@@ -6466,7 +6471,7 @@
             {
               "name": "Shape 1",
               "ioValue": {
-                "geometry": "move-circle-0.8333333333333334--5-10-0",
+                "geometry": "move-circle-0.08333333333333333--0.5-0.5-0",
                 "dimension": "2D",
                 "tags": [],
                 "plane": {
@@ -6493,7 +6498,7 @@
             {
               "name": "Shape 2",
               "ioValue": {
-                "geometry": "move-circle-0.8333333333333334-5-10-0",
+                "geometry": "move-circle-0.08333333333333333-0.5-0.5-0",
                 "dimension": "2D",
                 "tags": [],
                 "plane": {
@@ -6520,7 +6525,7 @@
             {
               "name": "Shape 3",
               "ioValue": {
-                "geometry": "move-circle-0.8333333333333334-0--20-0",
+                "geometry": "move-circle-0.08333333333333333-0--2-0",
                 "dimension": "2D",
                 "tags": [],
                 "plane": {
@@ -6565,13 +6570,13 @@
           "ioValues": [
             {
               "name": "x length",
-              "ioValue": 20,
-              "currentEquation": "depth * 2"
+              "ioValue": 1.1666666666666667,
+              "currentEquation": "depth + corner_diam"
             },
             {
               "name": "y length",
-              "ioValue": 20,
-              "currentEquation": "depth * 2"
+              "ioValue": 1.1666666666666667,
+              "currentEquation": "depth + corner_diam"
             }
           ]
         },
@@ -6591,8 +6596,8 @@
             },
             {
               "name": "yDist",
-              "ioValue": 10,
-              "currentEquation": "depth"
+              "ioValue": 0.5833333333333334,
+              "currentEquation": "(depth + corner_diam) /2"
             },
             {
               "name": "zDist",
@@ -6618,8 +6623,8 @@
         },
         {
           "atomType": "GitHubMolecule",
-          "x": 0.5,
-          "y": 0.8,
+          "x": 0.4,
+          "y": 0.9,
           "uniqueID": "id-4417",
           "name": "util.Offset",
           "ioValues": [
@@ -6629,7 +6634,8 @@
             },
             {
               "name": "Offset",
-              "ioValue": 10
+              "ioValue": -0.1,
+              "currentEquation": "-tolerance"
             }
           ],
           "topLevel": false,
@@ -6658,7 +6664,7 @@
                 },
                 {
                   "name": "offset",
-                  "ioValue": 10
+                  "ioValue": -0.1
                 }
               ],
               "interpreterVersion": 1,
@@ -6729,6 +6735,784 @@
           "unitsKey": "Unitless",
           "fileTypeVersion": 1,
           "lastReloadedFromGithubAt": 1788553415767
+        },
+        {
+          "atomType": "Input",
+          "x": 0,
+          "y": 0.6,
+          "uniqueID": "id-4429",
+          "name": "tolerance"
+        },
+        {
+          "atomType": "Difference",
+          "x": 0.6,
+          "y": 0.8,
+          "uniqueID": "id-4432",
+          "ioValues": [
+            {
+              "name": "retain",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "remove",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "GitHubMolecule",
+          "x": 0.7,
+          "y": 0.5,
+          "uniqueID": "id-4458",
+          "name": "util.RotateAround",
+          "ioValues": [
+            {
+              "name": "X",
+              "ioValue": 0
+            },
+            {
+              "name": "Y",
+              "ioValue": 0
+            },
+            {
+              "name": "Z",
+              "ioValue": 180,
+              "currentEquation": "180"
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-4437",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.5,
+              "y": 0.2,
+              "uniqueID": "id-4438",
+              "ioValues": [
+                {
+                  "name": "toRotate",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "x",
+                  "ioValue": 0
+                },
+                {
+                  "name": "y",
+                  "ioValue": 0
+                },
+                {
+                  "name": "z",
+                  "ioValue": 180
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "\n/**\n * =========================================================================\n *  ABUNDANCE CODE ATOM — Quick Reference\n * =========================================================================\n *\n *  HOW INPUTS WORK\n *  ---------------\n *  Every parameter of run() becomes an input port on this atom.\n *  Four types are supported:\n *\n *    number   -> numeric input / slider\n *    string   -> text input  (great for hex color codes, labels, etc.)\n *    boolean  -> true/false toggle\n *    Assembly -> geometry -- wire this to the output of another atom\n *\n *  Give a parameter a default value ( = x ) to make it optional.\n *  Mark it with ? (name?: Assembly) to make it optional with no default.\n *  Parameters without a default must be connected before the atom runs.\n *\n *  RETURN VALUE\n *  ------------\n *  Return an Assembly, an Assembly[], or a primitive (number/string/boolean).\n *  Returning an Assembly[] lets downstream atoms (BOM, cut layout...)\n *  see each piece independently.\n *\n *  GEOMETRY API  (replicad is available as a global)\n *  -------------------------------------------------\n *  Create 2-D sketches\n *    replicad.drawCircle(radius)\n *    replicad.drawRectangle(width, height)\n *    replicad.drawRoundedRectangle(width, height, cornerRadius)\n *\n *  Turn a 2-D sketch into a 3-D solid\n *    sketch.sketchOnPlane().extrude(distance)\n *    sketch.sketchOnPlane().revolve()          // rotate 360 deg around Z\n *\n *  Create 3-D primitives directly\n *    replicad.makeBaseBox(width, depth, height)\n *    replicad.makeSphere(radius)\n *    replicad.makeCylinder(radius, height)\n *\n *  Boolean operations\n *    solidA.fuse(solidB)                       // union\n *    solidA.cut(solidB)                        // difference (cut a hole)\n *    solidA.intersect(solidB)                  // intersection\n *\n *  Post-processing\n *    solid.fillet(radius)                      // round ALL edges\n *    solid.fillet(r, e => e.inPlane(\"XY\", z))  // round only top-face edges\n *    solid.chamfer(distance)                   // bevel ALL edges\n *    solid.translate(x, y, z)                  // move the solid\n *    solid.rotate(angle, [0, 0, 1])            // rotate around Z axis\n *\n *  ASSEMBLY CLASS\n *  --------------\n *  Wrap any replicad solid in an Assembly to attach display metadata:\n *    new Assembly({ geometry, color, tags, bom })\n *      geometry -> replicad solid / drawing returned by the API above\n *      color    -> hex string shown in the 3-D viewport  (\"#A3CE5B\")\n *      tags     -> string[] used for filtering in cut layout / BOM\n *      bom      -> string[] lines added to the Bill of Materials panel\n *\n *  AI PROMPT TIP\n *  -------------\n *  Copy the code in this editor into ChatGPT / Claude and say something like:\n *    \"Modify this Abundance Code Atom to create a gear with 12 teeth\"\n *    \"Change this to make a hexagonal nut instead of a round plate\"\n *  The comments above give the AI all the context it needs to produce\n *  valid, working Abundance TypeScript code.\n * =========================================================================\n */\n\n/**\n * A rectangular mounting plate with a circular hole in the centre.\n * All parameters have defaults so the atom produces geometry immediately\n * after creation — no connections required to get started.\n */\nfunction run(\n  toRotate: Assembly,\n  pivotPoint: number[],\n  x: number = 0,\n  y: number = 0,\n  z: number = 0,\n) {\n  let validatedPivot: [number, number, number]|undefined = undefined\n  if (pivotPoint?.length === 3) {\n    validatedPivot = pivotPoint as [number, number, number];\n    if (toRotate.is2D()) {\n      throw new Error(\"Rotating drawings requires a 2d pivot Point, z value is disallowed\")\n    }\n  }\n  if (pivotPoint?.length == 2 && toRotate.is2D()) {\n    validatedPivot = [pivotPoint[0], pivotPoint[1], 0]\n  }\n  //@ts-ignore\n  if (pivotPoint?.geometry) {\n    //@ts-ignore\n    const assemblyPoint = pivotPoint as Assembly;\n\n    if (assemblyPoint.isLeaf() && assemblyPoint.isPoint()) {\n      validatedPivot = (assemblyPoint.geometry as replicad.Vertex).asTuple()\n    } else {\n      throw new Error(\"If pivot is being provided as an assembly it must be an Assembly of a singular Point\")\n    }\n  }\n  \n  if (!validatedPivot) {\n    // Point not provided, set a default\n    // get assembly bounds\n    \n    let mins = [Infinity, Infinity, Infinity]\n    let maxs = [-Infinity, -Infinity, -Infinity]\n    toRotate.onLeafs((leaf) => {\n      const bounds = leaf.geometry.clone().boundingBox.bounds;\n      const minEdge = bounds[0]\n      const maxEdge = bounds[1]\n      mins = mins.map((v, i) => Math.min(v, minEdge[i]))\n      maxs = maxs.map((v, i) => Math.max(v, maxEdge[i]))\n      return leaf;\n    })\n    validatedPivot = mins.map((v, i) => {return (v + maxs[i]) / 2;}) as [number, number, number]\n  }\n\n  // if a 3d Geometry\n  if (!toRotate.is2D()) {\n    const transform = eulerToSingleAxisRotation(x, y, z)\n    // now that pivot point is set, do the rotation\n    return toRotate.onLeafs((leaf) => {\n      leaf.geometry = (leaf.geometry as replicad.AnyShape).rotate(transform.angleDeg, validatedPivot, transform.axis)\n      return leaf;\n    });\n  }\n  // Drawings get slightly more complex behavior\n  return toRotate.onLeafs((leaf) => {\n    leaf.geometry = (leaf.geometry as replicad.Drawing).rotate(z, [validatedPivot[0], validatedPivot[1]]);\n    const transform = eulerToSingleAxisRotation(x, y, 0)\n    leaf.plane = leaf.plane.pivot(transform.angleDeg, transform.axis)\n    return leaf;\n  })\n}\n\n///// AI Gen /////\n\n/**\n * Consolidate Euler rotations (X/Y/Z) into a single axis-angle rotation.\n *\n * Given rotations around the local/global X, Y, Z axes:\n *   Rx(xDeg) -> Ry(yDeg) -> Rz(zDeg)\n *\n * This computes:\n *   angleDeg\n *   axis [x,y,z]\n *\n * so you can do:\n *   obj.rotate(angleDeg, center, axis)\n *\n * Assumes:\n * - Right-handed coordinate system\n * - Intrinsic rotations applied in X -> Y -> Z order\n * - rotate() uses axis-angle rotation\n */\n\ntype Vec3 = [number, number, number];\n\ninterface AxisAngle {\n  angleDeg: number;\n  axis: Vec3;\n}\n\nfunction degreesToRadians(deg: number): number {\n  return (deg * Math.PI) / 180;\n}\n\nfunction radiansToDegrees(rad: number): number {\n  return (rad * 180) / Math.PI;\n}\n\n/**\n * 3x3 matrix multiplication\n */\nfunction multiply3x3(a: number[][], b: number[][]): number[][] {\n  const out = Array.from({ length: 3 }, () => [0, 0, 0]);\n\n  for (let r = 0; r < 3; r++) {\n    for (let c = 0; c < 3; c++) {\n      out[r][c] =\n        a[r][0] * b[0][c] +\n        a[r][1] * b[1][c] +\n        a[r][2] * b[2][c];\n    }\n  }\n\n  return out;\n}\n\n/**\n * Rotation matrix around X axis\n */\nfunction rotationX(rad: number): number[][] {\n  const c = Math.cos(rad);\n  const s = Math.sin(rad);\n\n  return [\n    [1, 0, 0],\n    [0, c, -s],\n    [0, s, c],\n  ];\n}\n\n/**\n * Rotation matrix around Y axis\n */\nfunction rotationY(rad: number): number[][] {\n  const c = Math.cos(rad);\n  const s = Math.sin(rad);\n\n  return [\n    [c, 0, s],\n    [0, 1, 0],\n    [-s, 0, c],\n  ];\n}\n\n/**\n * Rotation matrix around Z axis\n */\nfunction rotationZ(rad: number): number[][] {\n  const c = Math.cos(rad);\n  const s = Math.sin(rad);\n\n  return [\n    [c, -s, 0],\n    [s, c, 0],\n    [0, 0, 1],\n  ];\n}\n\n/**\n * Convert a rotation matrix into axis-angle form.\n */\nfunction matrixToAxisAngle(m: number[][]): AxisAngle {\n  const trace = m[0][0] + m[1][1] + m[2][2];\n\n  // Numerical safety\n  const cosTheta = Math.min(1, Math.max(-1, (trace - 1) / 2));\n\n  const theta = Math.acos(cosTheta);\n\n  // No rotation\n  if (Math.abs(theta) < 1e-8) {\n    return {\n      angleDeg: 0,\n      axis: [1, 0, 0],\n    };\n  }\n\n  const sinTheta = Math.sin(theta);\n\n  const x = (m[2][1] - m[1][2]) / (2 * sinTheta);\n  const y = (m[0][2] - m[2][0]) / (2 * sinTheta);\n  const z = (m[1][0] - m[0][1]) / (2 * sinTheta);\n\n  // Normalize axis\n  const len = Math.hypot(x, y, z);\n\n  return {\n    angleDeg: radiansToDegrees(theta),\n    axis: [x / len, y / len, z / len],\n  };\n}\n\n/**\n * Convert Euler rotations into one axis-angle rotation.\n *\n * Rotation order:\n *   X -> Y -> Z\n *\n * If your CAD engine applies them differently,\n * change the multiplication order.\n */\nfunction eulerToSingleAxisRotation(\n  xDeg: number,\n  yDeg: number,\n  zDeg: number\n): AxisAngle {\n  const rx = rotationX(degreesToRadians(xDeg));\n  const ry = rotationY(degreesToRadians(yDeg));\n  const rz = rotationZ(degreesToRadians(zDeg));\n\n  // Combined rotation matrix:\n  // Apply X, then Y, then Z\n  const combined = multiply3x3(\n    rz,\n    multiply3x3(ry, rx)\n  );\n\n  return matrixToAxisAngle(combined);\n}\n",
+              "compiledCode": "\"use strict\";\n/**\n * =========================================================================\n *  ABUNDANCE CODE ATOM — Quick Reference\n * =========================================================================\n *\n *  HOW INPUTS WORK\n *  ---------------\n *  Every parameter of run() becomes an input port on this atom.\n *  Four types are supported:\n *\n *    number   -> numeric input / slider\n *    string   -> text input  (great for hex color codes, labels, etc.)\n *    boolean  -> true/false toggle\n *    Assembly -> geometry -- wire this to the output of another atom\n *\n *  Give a parameter a default value ( = x ) to make it optional.\n *  Mark it with ? (name?: Assembly) to make it optional with no default.\n *  Parameters without a default must be connected before the atom runs.\n *\n *  RETURN VALUE\n *  ------------\n *  Return an Assembly, an Assembly[], or a primitive (number/string/boolean).\n *  Returning an Assembly[] lets downstream atoms (BOM, cut layout...)\n *  see each piece independently.\n *\n *  GEOMETRY API  (replicad is available as a global)\n *  -------------------------------------------------\n *  Create 2-D sketches\n *    replicad.drawCircle(radius)\n *    replicad.drawRectangle(width, height)\n *    replicad.drawRoundedRectangle(width, height, cornerRadius)\n *\n *  Turn a 2-D sketch into a 3-D solid\n *    sketch.sketchOnPlane().extrude(distance)\n *    sketch.sketchOnPlane().revolve()          // rotate 360 deg around Z\n *\n *  Create 3-D primitives directly\n *    replicad.makeBaseBox(width, depth, height)\n *    replicad.makeSphere(radius)\n *    replicad.makeCylinder(radius, height)\n *\n *  Boolean operations\n *    solidA.fuse(solidB)                       // union\n *    solidA.cut(solidB)                        // difference (cut a hole)\n *    solidA.intersect(solidB)                  // intersection\n *\n *  Post-processing\n *    solid.fillet(radius)                      // round ALL edges\n *    solid.fillet(r, e => e.inPlane(\"XY\", z))  // round only top-face edges\n *    solid.chamfer(distance)                   // bevel ALL edges\n *    solid.translate(x, y, z)                  // move the solid\n *    solid.rotate(angle, [0, 0, 1])            // rotate around Z axis\n *\n *  ASSEMBLY CLASS\n *  --------------\n *  Wrap any replicad solid in an Assembly to attach display metadata:\n *    new Assembly({ geometry, color, tags, bom })\n *      geometry -> replicad solid / drawing returned by the API above\n *      color    -> hex string shown in the 3-D viewport  (\"#A3CE5B\")\n *      tags     -> string[] used for filtering in cut layout / BOM\n *      bom      -> string[] lines added to the Bill of Materials panel\n *\n *  AI PROMPT TIP\n *  -------------\n *  Copy the code in this editor into ChatGPT / Claude and say something like:\n *    \"Modify this Abundance Code Atom to create a gear with 12 teeth\"\n *    \"Change this to make a hexagonal nut instead of a round plate\"\n *  The comments above give the AI all the context it needs to produce\n *  valid, working Abundance TypeScript code.\n * =========================================================================\n */\n/**\n * A rectangular mounting plate with a circular hole in the centre.\n * All parameters have defaults so the atom produces geometry immediately\n * after creation — no connections required to get started.\n */\nfunction run(toRotate, pivotPoint, x = 0, y = 0, z = 0) {\n    let validatedPivot = undefined;\n    if (pivotPoint?.length === 3) {\n        validatedPivot = pivotPoint;\n        if (toRotate.is2D()) {\n            throw new Error(\"Rotating drawings requires a 2d pivot Point, z value is disallowed\");\n        }\n    }\n    if (pivotPoint?.length == 2 && toRotate.is2D()) {\n        validatedPivot = [pivotPoint[0], pivotPoint[1], 0];\n    }\n    //@ts-ignore\n    if (pivotPoint?.geometry) {\n        //@ts-ignore\n        const assemblyPoint = pivotPoint;\n        if (assemblyPoint.isLeaf() && assemblyPoint.isPoint()) {\n            validatedPivot = assemblyPoint.geometry.asTuple();\n        }\n        else {\n            throw new Error(\"If pivot is being provided as an assembly it must be an Assembly of a singular Point\");\n        }\n    }\n    if (!validatedPivot) {\n        // Point not provided, set a default\n        // get assembly bounds\n        let mins = [Infinity, Infinity, Infinity];\n        let maxs = [-Infinity, -Infinity, -Infinity];\n        toRotate.onLeafs((leaf) => {\n            const bounds = leaf.geometry.clone().boundingBox.bounds;\n            const minEdge = bounds[0];\n            const maxEdge = bounds[1];\n            mins = mins.map((v, i) => Math.min(v, minEdge[i]));\n            maxs = maxs.map((v, i) => Math.max(v, maxEdge[i]));\n            return leaf;\n        });\n        validatedPivot = mins.map((v, i) => { return (v + maxs[i]) / 2; });\n    }\n    // if a 3d Geometry\n    if (!toRotate.is2D()) {\n        const transform = eulerToSingleAxisRotation(x, y, z);\n        // now that pivot point is set, do the rotation\n        return toRotate.onLeafs((leaf) => {\n            leaf.geometry = leaf.geometry.rotate(transform.angleDeg, validatedPivot, transform.axis);\n            return leaf;\n        });\n    }\n    // Drawings get slightly more complex behavior\n    return toRotate.onLeafs((leaf) => {\n        leaf.geometry = leaf.geometry.rotate(z, [validatedPivot[0], validatedPivot[1]]);\n        const transform = eulerToSingleAxisRotation(x, y, 0);\n        leaf.plane = leaf.plane.pivot(transform.angleDeg, transform.axis);\n        return leaf;\n    });\n}\nfunction degreesToRadians(deg) {\n    return (deg * Math.PI) / 180;\n}\nfunction radiansToDegrees(rad) {\n    return (rad * 180) / Math.PI;\n}\n/**\n * 3x3 matrix multiplication\n */\nfunction multiply3x3(a, b) {\n    const out = Array.from({ length: 3 }, () => [0, 0, 0]);\n    for (let r = 0; r < 3; r++) {\n        for (let c = 0; c < 3; c++) {\n            out[r][c] =\n                a[r][0] * b[0][c] +\n                    a[r][1] * b[1][c] +\n                    a[r][2] * b[2][c];\n        }\n    }\n    return out;\n}\n/**\n * Rotation matrix around X axis\n */\nfunction rotationX(rad) {\n    const c = Math.cos(rad);\n    const s = Math.sin(rad);\n    return [\n        [1, 0, 0],\n        [0, c, -s],\n        [0, s, c],\n    ];\n}\n/**\n * Rotation matrix around Y axis\n */\nfunction rotationY(rad) {\n    const c = Math.cos(rad);\n    const s = Math.sin(rad);\n    return [\n        [c, 0, s],\n        [0, 1, 0],\n        [-s, 0, c],\n    ];\n}\n/**\n * Rotation matrix around Z axis\n */\nfunction rotationZ(rad) {\n    const c = Math.cos(rad);\n    const s = Math.sin(rad);\n    return [\n        [c, -s, 0],\n        [s, c, 0],\n        [0, 0, 1],\n    ];\n}\n/**\n * Convert a rotation matrix into axis-angle form.\n */\nfunction matrixToAxisAngle(m) {\n    const trace = m[0][0] + m[1][1] + m[2][2];\n    // Numerical safety\n    const cosTheta = Math.min(1, Math.max(-1, (trace - 1) / 2));\n    const theta = Math.acos(cosTheta);\n    // No rotation\n    if (Math.abs(theta) < 1e-8) {\n        return {\n            angleDeg: 0,\n            axis: [1, 0, 0],\n        };\n    }\n    const sinTheta = Math.sin(theta);\n    const x = (m[2][1] - m[1][2]) / (2 * sinTheta);\n    const y = (m[0][2] - m[2][0]) / (2 * sinTheta);\n    const z = (m[1][0] - m[0][1]) / (2 * sinTheta);\n    // Normalize axis\n    const len = Math.hypot(x, y, z);\n    return {\n        angleDeg: radiansToDegrees(theta),\n        axis: [x / len, y / len, z / len],\n    };\n}\n/**\n * Convert Euler rotations into one axis-angle rotation.\n *\n * Rotation order:\n *   X -> Y -> Z\n *\n * If your CAD engine applies them differently,\n * change the multiplication order.\n */\nfunction eulerToSingleAxisRotation(xDeg, yDeg, zDeg) {\n    const rx = rotationX(degreesToRadians(xDeg));\n    const ry = rotationY(degreesToRadians(yDeg));\n    const rz = rotationZ(degreesToRadians(zDeg));\n    // Combined rotation matrix:\n    // Apply X, then Y, then Z\n    const combined = multiply3x3(rz, multiply3x3(ry, rx));\n    return matrixToAxisAngle(combined);\n}\n"
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.1,
+              "uniqueID": "id-4439",
+              "name": "PivotPoint",
+              "type": "array"
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.2,
+              "uniqueID": "id-4440",
+              "name": "X"
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.3,
+              "uniqueID": "id-4441",
+              "name": "Y"
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.4,
+              "uniqueID": "id-4442",
+              "name": "Z"
+            },
+            {
+              "atomType": "Rectangle",
+              "x": 0.1,
+              "y": 0.7,
+              "uniqueID": "id-4443",
+              "ioValues": [
+                {
+                  "name": "x length",
+                  "ioValue": 50
+                },
+                {
+                  "name": "y length",
+                  "ioValue": 10
+                }
+              ]
+            },
+            {
+              "atomType": "Extrude",
+              "x": 0.2,
+              "y": 0.8,
+              "uniqueID": "id-4444",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "height",
+                  "ioValue": 1
+                }
+              ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.4,
+              "y": 0.7,
+              "uniqueID": "id-4445",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 10
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 20
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 30
+                }
+              ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.4,
+              "y": 0.6,
+              "uniqueID": "id-4446",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 5
+                }
+              ]
+            },
+            {
+              "atomType": "Assembly",
+              "x": 0.4,
+              "y": 0.8,
+              "uniqueID": "id-4447",
+              "ioValues": [
+                {
+                  "name": "Shape 1",
+                  "ioValue": null
+                },
+                {
+                  "name": "Shape 2",
+                  "ioValue": null
+                }
+              ]
+            },
+            {
+              "atomType": "Rotate",
+              "x": 0.7,
+              "y": 0.6,
+              "uniqueID": "id-4448",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "x-axis degrees",
+                  "ioValue": 60
+                },
+                {
+                  "name": "y-axis degrees",
+                  "ioValue": 30
+                },
+                {
+                  "name": "z-axis degrees",
+                  "ioValue": 10
+                }
+              ]
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.5,
+              "uniqueID": "id-4449",
+              "name": "Geometry"
+            },
+            {
+              "atomType": "Rotate",
+              "x": 0.3,
+              "y": 0.8,
+              "uniqueID": "id-4450",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "x-axis degrees",
+                  "ioValue": 0
+                },
+                {
+                  "name": "y-axis degrees",
+                  "ioValue": 0
+                },
+                {
+                  "name": "z-axis degrees",
+                  "ioValue": 90
+                }
+              ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.2,
+              "y": 0.4,
+              "uniqueID": "id-4451",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 10
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 20
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "GitHubMolecule",
+              "x": 0.4,
+              "y": 0.6,
+              "uniqueID": "id-4452",
+              "name": "crv.Point",
+              "ioValues": [
+                {
+                  "name": "X",
+                  "ioValue": 0
+                },
+                {
+                  "name": "Y",
+                  "ioValue": 60
+                },
+                {
+                  "name": "Z",
+                  "ioValue": 30
+                }
+              ],
+              "topLevel": false,
+              "allAtoms": [
+                {
+                  "atomType": "Output",
+                  "x": 1,
+                  "y": 0.5,
+                  "uniqueID": "id-4453",
+                  "ioValues": [
+                    {
+                      "name": "number or geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.1,
+                  "uniqueID": "id-4454",
+                  "name": "X"
+                },
+                {
+                  "atomType": "Code",
+                  "x": 0.3,
+                  "y": 0.4,
+                  "uniqueID": "id-4455",
+                  "ioValues": [
+                    {
+                      "name": "x",
+                      "ioValue": 0
+                    },
+                    {
+                      "name": "y",
+                      "ioValue": 60
+                    },
+                    {
+                      "name": "z",
+                      "ioValue": 30
+                    }
+                  ],
+                  "interpreterVersion": 1,
+                  "code": "\nfunction run(x: number = 0, y: number = 0, z: number = 0) {\n  return replicad.makeVertex([x,y,z])\n}",
+                  "compiledCode": "\"use strict\";\nfunction run(x = 0, y = 0, z = 0) {\n    return replicad.makeVertex([x, y, z]);\n}\n"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.2,
+                  "uniqueID": "id-4456",
+                  "name": "Y"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0,
+                  "y": 0.3,
+                  "uniqueID": "id-4457",
+                  "name": "Z"
+                }
+              ],
+              "allConnectors": [
+                {
+                  "ap2Name": "x",
+                  "ap1ID": "id-4454",
+                  "ap2ID": "id-4455"
+                },
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-4455",
+                  "ap2ID": "id-4453"
+                },
+                {
+                  "ap2Name": "y",
+                  "ap1ID": "id-4456",
+                  "ap2ID": "id-4455"
+                },
+                {
+                  "ap2Name": "z",
+                  "ap1ID": "id-4457",
+                  "ap2ID": "id-4455"
+                }
+              ],
+              "parentRepo": {
+                "lastFoundGit": "2026-05-18T10:23:39.136Z",
+                "privateRepo": false,
+                "repoName": "crv.Point",
+                "dateCreated": "2026-05-08T22:20:14Z",
+                "likes": 0,
+                "readMe": "https://raw.githubusercontent.com/tristan-huber/crv.Point/master/README.md?sanitize=true",
+                "yyyy": 2026,
+                "topMoleculeID": "id-1",
+                "githubMoleculesUsed": [],
+                "html_url": "https://github.com/tristan-huber/crv.Point",
+                "topics": [
+                  "abundance-tool"
+                ],
+                "parentRepo": null,
+                "forks": 0,
+                "dateModified": "739744",
+                "ranking": 0.9,
+                "searchField": "crv.point tristan-huber simple 3d point defined by it's xyz position abundance-tool",
+                "owner": "tristan-huber",
+                "description": "Simple 3d Point defined by it's xyz position",
+                "contentURL": "https://raw.githubusercontent.com/tristan-huber/crv.Point/master/project.abundance?sanitize=true",
+                "svgURL": "https://raw.githubusercontent.com/tristan-huber/crv.Point/master/project.svg?sanitize=true",
+                "isLocal": false
+              },
+              "unitsKey": "Unitless",
+              "fileTypeVersion": 1,
+              "lastReloadedFromGithubAt": 1779128409429
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-4438",
+              "ap2ID": "id-4437"
+            },
+            {
+              "ap2Name": "pivotPoint",
+              "ap1ID": "id-4439",
+              "ap2ID": "id-4438"
+            },
+            {
+              "ap2Name": "x",
+              "ap1ID": "id-4440",
+              "ap2ID": "id-4438"
+            },
+            {
+              "ap2Name": "y",
+              "ap1ID": "id-4441",
+              "ap2ID": "id-4438"
+            },
+            {
+              "ap2Name": "z",
+              "ap1ID": "id-4442",
+              "ap2ID": "id-4438"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-4443",
+              "ap2ID": "id-4444"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-4443",
+              "ap2ID": "id-4451"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-4444",
+              "ap2ID": "id-4445"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-4445",
+              "ap2ID": "id-4446"
+            },
+            {
+              "ap2Name": "Shape 2",
+              "ap1ID": "id-4445",
+              "ap2ID": "id-4447"
+            },
+            {
+              "ap2Name": "Shape 1",
+              "ap1ID": "id-4446",
+              "ap2ID": "id-4447"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-4447",
+              "ap2ID": "id-4448"
+            },
+            {
+              "ap2Name": "toRotate",
+              "ap1ID": "id-4449",
+              "ap2ID": "id-4438"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-4451",
+              "ap2ID": "id-4450"
+            }
+          ],
+          "parentRepo": {
+            "lastFoundGit": "2026-09-04T18:23:39.031Z",
+            "privateRepo": false,
+            "repoName": "util.RotateAround",
+            "dateCreated": "2026-05-18T17:45:12Z",
+            "likes": 0,
+            "readMe": "https://raw.githubusercontent.com/tristan-huber/util.RotateAround/master/README.md?sanitize=true",
+            "yyyy": 2026,
+            "topMoleculeID": "id-1",
+            "githubMoleculesUsed": [
+              {
+                "owner": "tristan-huber",
+                "repoName": "crv.Point"
+              }
+            ],
+            "html_url": "https://github.com/tristan-huber/util.RotateAround",
+            "topics": [
+              "abundance-tool"
+            ],
+            "pullRequests": [],
+            "parentRepo": null,
+            "forks": 0,
+            "dateModified": "739754",
+            "ranking": 2.1,
+            "searchField": "util.rotatearound tristan-huber rotate an assembly around a specific point by the given x,y,z components of rotation. defaults to rotating around the assembly's geometric center. abundance-tool",
+            "owner": "tristan-huber",
+            "description": "Rotate an assembly around a specific point by the given x,y,z components of rotation. Defaults to rotating around the assembly's geometric center.",
+            "contentURL": "https://raw.githubusercontent.com/tristan-huber/util.RotateAround/master/project.abundance?sanitize=true",
+            "svgURL": "https://raw.githubusercontent.com/tristan-huber/util.RotateAround/master/project.svg?sanitize=true",
+            "isLocal": false
+          },
+          "unitsKey": "Unitless",
+          "fileTypeVersion": 1,
+          "lastReloadedFromGithubAt": 1788553624792
+        },
+        {
+          "atomType": "GitHubMolecule",
+          "x": 0.6,
+          "y": 0.4,
+          "uniqueID": "id-4534",
+          "name": "crv.Point",
+          "ioValues": [
+            {
+              "name": "X",
+              "ioValue": 1.0199625856076389
+            },
+            {
+              "name": "Y",
+              "ioValue": 0
+            },
+            {
+              "name": "Z",
+              "ioValue": 0
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-4529",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.1,
+              "uniqueID": "id-4530",
+              "name": "X"
+            },
+            {
+              "atomType": "Code",
+              "x": 0.3,
+              "y": 0.4,
+              "uniqueID": "id-4531",
+              "ioValues": [
+                {
+                  "name": "x",
+                  "ioValue": 1.0199625856076389
+                },
+                {
+                  "name": "y",
+                  "ioValue": 0
+                },
+                {
+                  "name": "z",
+                  "ioValue": 0
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "\nfunction run(x: number = 0, y: number = 0, z: number = 0) {\n  return replicad.makeVertex([x,y,z])\n}",
+              "compiledCode": "\"use strict\";\nfunction run(x = 0, y = 0, z = 0) {\n    return replicad.makeVertex([x, y, z]);\n}\n"
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.2,
+              "uniqueID": "id-4532",
+              "name": "Y"
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.3,
+              "uniqueID": "id-4533",
+              "name": "Z"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "x",
+              "ap1ID": "id-4530",
+              "ap2ID": "id-4531"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-4531",
+              "ap2ID": "id-4529"
+            },
+            {
+              "ap2Name": "y",
+              "ap1ID": "id-4532",
+              "ap2ID": "id-4531"
+            },
+            {
+              "ap2Name": "z",
+              "ap1ID": "id-4533",
+              "ap2ID": "id-4531"
+            }
+          ],
+          "parentRepo": {
+            "lastFoundGit": "2026-09-04T18:23:39.031Z",
+            "privateRepo": false,
+            "repoName": "crv.Point",
+            "dateCreated": "2026-05-08T22:20:14Z",
+            "likes": 0,
+            "readMe": "https://raw.githubusercontent.com/tristan-huber/crv.Point/master/README.md?sanitize=true",
+            "yyyy": 2026,
+            "topMoleculeID": "id-1",
+            "githubMoleculesUsed": [],
+            "html_url": "https://github.com/tristan-huber/crv.Point",
+            "topics": [
+              "abundance-tool"
+            ],
+            "pullRequests": [],
+            "parentRepo": null,
+            "forks": 0,
+            "dateModified": "739847",
+            "ranking": 7.8,
+            "searchField": "crv.point tristan-huber simple 3d point defined by it's xyz position abundance-tool",
+            "owner": "tristan-huber",
+            "description": "Simple 3d Point defined by it's xyz position",
+            "contentURL": "https://raw.githubusercontent.com/tristan-huber/crv.Point/master/project.abundance?sanitize=true",
+            "svgURL": "https://raw.githubusercontent.com/tristan-huber/crv.Point/master/project.svg?sanitize=true",
+            "isLocal": false
+          },
+          "unitsKey": "Unitless",
+          "fileTypeVersion": 1,
+          "lastReloadedFromGithubAt": 1788553652271
+        },
+        {
+          "atomType": "GitHubMolecule",
+          "x": 0.5,
+          "y": 0.3,
+          "uniqueID": "id-4553",
+          "name": "Width",
+          "ioValues": [
+            {
+              "name": "Shape",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-4550",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.1,
+              "uniqueID": "id-4551",
+              "name": "Shape",
+              "type": "geometry"
+            },
+            {
+              "atomType": "Code",
+              "x": 0.4,
+              "y": 0.5,
+              "uniqueID": "id-4552",
+              "ioValues": [
+                {
+                  "name": "A",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ],
+              "interpreterVersion": 0,
+              "code": "/**\n Inputs for this Code Atom:\n - Takes a single geometry input \"A\" and returns its width (X size) as measured by the bounding box.\n*/\nInputs = [\n  { inputName: \"A\", type: \"geometry\", defaultValue: null }\n]\n\nif (!A) {\n  // No input provided — return null to indicate absence.\n  return null\n}\n\n// Get bounding box of A. boundsA.min and boundsA.max are arrays [x, y, z]\nlet boundsA = await GetBounds(A);\nlet min = boundsA.min;\nlet max = boundsA.max;\n\n// Compute width along X (maxX - minX)\nlet width = max[0] - min[0];\n\n// Ensure a non-negative numeric result\nwidth = typeof width === 'number' && isFinite(width) ? Math.max(0, width) : null;\n\nreturn width;"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "A",
+              "ap1ID": "id-4551",
+              "ap2ID": "id-4552"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-4552",
+              "ap2ID": "id-4550"
+            }
+          ],
+          "parentRepo": {
+            "lastFoundGit": "2026-09-04T18:23:39.031Z",
+            "privateRepo": false,
+            "repoName": "Width",
+            "dateCreated": "2025-12-04T20:14:11Z",
+            "likes": 0,
+            "readMe": "https://raw.githubusercontent.com/BarbourSmith/Width/master/README.md?sanitize=true",
+            "yyyy": 2025,
+            "topMoleculeID": "id-386",
+            "githubMoleculesUsed": [],
+            "html_url": "https://github.com/BarbourSmith/Width",
+            "topics": [],
+            "pullRequests": [],
+            "parentRepo": null,
+            "forks": 0,
+            "dateModified": "739589",
+            "ranking": 7.5,
+            "searchField": "width barboursmith takes a shape and returns the width as measured by the shapes bounding box in the x direction ",
+            "owner": "BarbourSmith",
+            "description": "Takes a shape and returns the width as measured by the shapes bounding box in the X direction",
+            "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Width/master/project.abundance?sanitize=true",
+            "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Width/master/project.svg?sanitize=true",
+            "isLocal": false
+          },
+          "unitsKey": "MM",
+          "fileTypeVersion": 1,
+          "lastReloadedFromGithubAt": 1788553672138
+        },
+        {
+          "atomType": "Difference",
+          "x": 0.5,
+          "y": 0.3,
+          "uniqueID": "id-4562",
+          "ioValues": [
+            {
+              "name": "retain",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "remove",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Equation",
+          "x": 0.6,
+          "y": 0.5,
+          "uniqueID": "id-4566",
+          "name": "tolerance / 2 + x",
+          "ioValues": [
+            {
+              "name": "x",
+              "ioValue": 0.9699625856076388,
+              "currentEquation": "1"
+            }
+          ],
+          "currentEquation": "tolerance / 2 + x"
         }
       ],
       "allConnectors": [
@@ -6773,6 +7557,11 @@
           "ap2ID": "id-4417"
         },
         {
+          "ap2Name": "retain",
+          "ap1ID": "id-4389",
+          "ap2ID": "id-4562"
+        },
+        {
           "ap2Name": "diameter",
           "ap1ID": "id-4395",
           "ap2ID": "id-4365"
@@ -6786,6 +7575,46 @@
           "ap2Name": "geometry1",
           "ap1ID": "id-4402",
           "ap2ID": "id-4408"
+        },
+        {
+          "ap2Name": "remove",
+          "ap1ID": "id-4402",
+          "ap2ID": "id-4562"
+        },
+        {
+          "ap2Name": "retain",
+          "ap1ID": "id-4408",
+          "ap2ID": "id-4432"
+        },
+        {
+          "ap2Name": "remove",
+          "ap1ID": "id-4417",
+          "ap2ID": "id-4432"
+        },
+        {
+          "ap2Name": "Geometry",
+          "ap1ID": "id-4432",
+          "ap2ID": "id-4458"
+        },
+        {
+          "ap2Name": "PivotPoint",
+          "ap1ID": "id-4534",
+          "ap2ID": "id-4458"
+        },
+        {
+          "ap2Name": "x",
+          "ap1ID": "id-4553",
+          "ap2ID": "id-4566"
+        },
+        {
+          "ap2Name": "Shape",
+          "ap1ID": "id-4562",
+          "ap2ID": "id-4553"
+        },
+        {
+          "ap2Name": "X",
+          "ap1ID": "id-4566",
+          "ap2ID": "id-4534"
         }
       ],
       "fileTypeVersion": 1
