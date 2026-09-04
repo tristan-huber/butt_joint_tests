@@ -5223,10 +5223,10 @@
           "downwardFaceIndex": 1
         },
         {
-          "downwardFaceIndex": 11
+          "downwardFaceIndex": 1
         },
         {
-          "downwardFaceIndex": 3
+          "downwardFaceIndex": 15
         },
         {
           "downwardFaceIndex": 0
@@ -5968,6 +5968,25 @@
               "ioValue": 0
             }
           ]
+        },
+        {
+          "atomType": "ExtractTag",
+          "x": 0.8,
+          "y": 0.2,
+          "uniqueID": "id-4218",
+          "name": "Extract keepout, Untagged",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "tagIndex": 0,
+          "selectedTags": [
+            "keepout"
+          ],
+          "includeUntagged": true,
+          "notKeepOut": false
         }
       ],
       "allConnectors": [
@@ -6037,9 +6056,9 @@
           "ap2ID": "id-4207"
         },
         {
-          "ap2Name": "number or geometry",
+          "ap2Name": "geometry",
           "ap1ID": "id-4197",
-          "ap2ID": "id-4088"
+          "ap2ID": "id-4218"
         },
         {
           "ap2Name": "Shape 2",
@@ -6055,6 +6074,11 @@
           "ap2Name": "Shape 3",
           "ap1ID": "id-4210",
           "ap2ID": "id-4197"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-4218",
+          "ap2ID": "id-4088"
         }
       ],
       "fileTypeVersion": 1
@@ -6178,14 +6202,14 @@
       "ap2ID": "id-1471"
     },
     {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1476",
-      "ap2ID": "id-2823"
-    },
-    {
       "ap2Name": "shape",
       "ap1ID": "id-1476",
       "ap2ID": "id-4086"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-4086",
+      "ap2ID": "id-2823"
     }
   ],
   "unitsKey": "Inches",
