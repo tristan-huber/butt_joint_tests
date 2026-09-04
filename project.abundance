@@ -7,7 +7,8 @@
   "ioValues": [
     {
       "name": "materialThickness",
-      "ioValue": 0.25
+      "ioValue": 0.5,
+      "currentEquation": "0.5"
     }
   ],
   "topLevel": true,
@@ -118,7 +119,7 @@
             },
             {
               "name": "height",
-              "ioValue": 0.25,
+              "ioValue": 0.5,
               "currentEquation": "materialThickness"
             }
           ]
@@ -2284,7 +2285,7 @@
             },
             {
               "name": "height",
-              "ioValue": 0.25,
+              "ioValue": 0.5,
               "currentEquation": "materialThickness"
             }
           ]
@@ -4134,7 +4135,7 @@
               "ioValues": [
                 {
                   "name": "x length",
-                  "ioValue": 2.0000016000000107
+                  "ioValue": 4.00000160000001
                 },
                 {
                   "name": "y length",
@@ -4151,7 +4152,7 @@
               "ioValues": [
                 {
                   "name": "x",
-                  "ioValue": 0.25000020000000134
+                  "ioValue": 0.5000002000000012
                 },
                 {
                   "name": "y",
@@ -4172,7 +4173,7 @@
                 },
                 {
                   "name": "height",
-                  "ioValue": 0.050000040000000266
+                  "ioValue": 0.10000004000000025
                 }
               ]
             },
@@ -4185,7 +4186,7 @@
               "ioValues": [
                 {
                   "name": "height",
-                  "ioValue": 0.25000020000000134
+                  "ioValue": 0.5000002000000012
                 },
                 {
                   "name": "step",
@@ -4212,7 +4213,7 @@
                 },
                 {
                   "name": "distX",
-                  "ioValue": 0.40000032000000213
+                  "ioValue": 0.800000320000002
                 },
                 {
                   "name": "distY",
@@ -4220,7 +4221,7 @@
                 },
                 {
                   "name": "distZ",
-                  "ioValue": 0.050000040000000266
+                  "ioValue": 0.10000004000000025
                 }
               ],
               "topLevel": false,
@@ -4371,7 +4372,7 @@
                     },
                     {
                       "name": "distX",
-                      "ioValue": 0.40000032000000213
+                      "ioValue": 0.800000320000002
                     },
                     {
                       "name": "distY",
@@ -4379,7 +4380,7 @@
                     },
                     {
                       "name": "distZ",
-                      "ioValue": 0.050000040000000266
+                      "ioValue": 0.10000004000000025
                     }
                   ],
                   "interpreterVersion": 1,
@@ -4531,7 +4532,7 @@
               "ioValues": [
                 {
                   "name": "totalWidth",
-                  "ioValue": 2.0000016000000107
+                  "ioValue": 4.00000160000001
                 }
               ],
               "currentEquation": "totalWidth / steps"
@@ -4554,7 +4555,7 @@
                   "ioValue": {
                     "geometry": [
                       {
-                        "geometry": "bb465d74-0",
+                        "geometry": "0b95f960-0",
                         "color": "#aad7f2",
                         "tags": [],
                         "bom": [],
@@ -4579,19 +4580,19 @@
                         "dimension": "3D",
                         "boundingBox": {
                           "min": [
-                            -1.0000009000000054,
+                            -2.0000009000000047,
                             -3.150000205,
                             -1e-7
                           ],
                           "max": [
-                            1.0000009000000054,
+                            2.0000009000000047,
                             3.150000205,
-                            0.050000140000000304
+                            0.10000014
                           ]
                         }
                       },
                       {
-                        "geometry": "bb465d74-1",
+                        "geometry": "0b95f960-1",
                         "color": "#aad7f2",
                         "tags": [],
                         "bom": [],
@@ -4616,19 +4617,19 @@
                         "dimension": "3D",
                         "boundingBox": {
                           "min": [
-                            -0.6000005800000031,
+                            -1.200000580000003,
                             -3.150000205,
-                            0.04999994000000026
+                            0.09999994000000025
                           ],
                           "max": [
-                            1.4000012200000076,
+                            2.8000012200000066,
                             3.150000205,
-                            0.10000018000000058
+                            0.20000018000000025
                           ]
                         }
                       },
                       {
-                        "geometry": "bb465d74-2",
+                        "geometry": "0b95f960-2",
                         "color": "#aad7f2",
                         "tags": [],
                         "bom": [],
@@ -4653,19 +4654,19 @@
                         "dimension": "3D",
                         "boundingBox": {
                           "min": [
-                            -0.2000002600000011,
+                            -0.40000026000000116,
                             -3.150000205,
-                            0.09999998000000053
+                            0.1999999800000005
                           ],
                           "max": [
-                            1.8000015400000098,
+                            3.6000015400000085,
                             3.150000205,
-                            0.15000022000000085
+                            0.3000002200000005
                           ]
                         }
                       },
                       {
-                        "geometry": "bb465d74-3",
+                        "geometry": "0b95f960-3",
                         "color": "#aad7f2",
                         "tags": [],
                         "bom": [],
@@ -4690,19 +4691,19 @@
                         "dimension": "3D",
                         "boundingBox": {
                           "min": [
-                            0.20000006000000098,
+                            0.40000006000000116,
                             -3.150000205,
-                            0.1500000200000008
+                            0.30000002000000076
                           ],
                           "max": [
-                            2.2000018600000115,
+                            4.400001860000011,
                             3.150000205,
-                            0.2000002600000011
+                            0.4000002600000008
                           ]
                         }
                       },
                       {
-                        "geometry": "bb465d74-4",
+                        "geometry": "0b95f960-4",
                         "color": "#aad7f2",
                         "tags": [],
                         "bom": [],
@@ -4727,14 +4728,14 @@
                         "dimension": "3D",
                         "boundingBox": {
                           "min": [
-                            0.6000003800000032,
+                            1.200000380000003,
                             -3.150000205,
-                            0.20000006000000106
+                            0.400000060000001
                           ],
                           "max": [
-                            2.6000021800000135,
+                            5.200002180000014,
                             3.150000205,
-                            0.25000030000000134
+                            0.500000300000001
                           ]
                         }
                       }
@@ -4763,14 +4764,14 @@
                     "nonReplicadSerialized": [],
                     "boundingBox": {
                       "min": [
-                        -1.0000009000000054,
+                        -2.0000009000000047,
                         -3.150000205,
                         -1e-7
                       ],
                       "max": [
-                        2.6000021800000135,
+                        5.200002180000014,
                         3.150000205,
-                        0.25000030000000134
+                        0.500000300000001
                       ]
                     }
                   }
@@ -4778,7 +4779,7 @@
                 {
                   "name": "Shape 3",
                   "ioValue": {
-                    "geometry": "extrude-rectangle-2.0000016000000107-6.30000021-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--0.01",
+                    "geometry": "extrude-rectangle-4.00000160000001-6.30000021-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--0.01",
                     "dimension": "3D",
                     "plane": {
                       "origin": [
@@ -4900,7 +4901,7 @@
                 },
                 {
                   "name": "xDist",
-                  "ioValue": 1.6000012800000085
+                  "ioValue": 3.200001280000008
                 },
                 {
                   "name": "yDist",
@@ -4953,11 +4954,11 @@
               "ioValues": [
                 {
                   "name": "offset",
-                  "ioValue": 2.0000016000000107
+                  "ioValue": 4.00000160000001
                 },
                 {
                   "name": "stepWidth",
-                  "ioValue": 0.40000032000000213
+                  "ioValue": 0.800000320000002
                 }
               ],
               "currentEquation": "offset - stepWidth"
@@ -5574,7 +5575,7 @@
             },
             {
               "name": "zDist",
-              "ioValue": 0.47,
+              "ioValue": 0.72,
               "currentEquation": ".22 + materialThickness"
             }
           ]
@@ -7726,7 +7727,7 @@
     },
     {
       "atomType": "Gcode",
-      "x": 0.7,
+      "x": 0.6,
       "y": 0.8,
       "uniqueID": "id-4698",
       "ioValues": [
@@ -7740,15 +7741,16 @@
         },
         {
           "name": "Passes",
-          "ioValue": 1
+          "ioValue": 3
         },
         {
           "name": "Speed",
-          "ioValue": 1500
+          "ioValue": 2000
         },
         {
           "name": "Cut Through",
-          "ioValue": 0
+          "ioValue": 0,
+          "currentEquation": "0"
         },
         {
           "name": "Part Name",
@@ -7821,7 +7823,7 @@
         },
         {
           "name": "height",
-          "ioValue": 0.25
+          "ioValue": 0.5
         }
       ]
     },
@@ -7834,11 +7836,6 @@
     }
   ],
   "allConnectors": [
-    {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-1471",
-      "ap2ID": "id-909"
-    },
     {
       "ap2Name": "value",
       "ap1ID": "id-1471",
@@ -7942,11 +7939,6 @@
     {
       "ap2Name": "geometry",
       "ap1ID": "id-2622",
-      "ap2ID": "id-4698"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-2622",
       "ap2ID": "id-5548"
     },
     {
@@ -7958,6 +7950,16 @@
       "ap2Name": "geometry",
       "ap1ID": "id-1476",
       "ap2ID": "id-2823"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-5548",
+      "ap2ID": "id-4698"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-5548",
+      "ap2ID": "id-909"
     }
   ],
   "unitsKey": "Inches",
