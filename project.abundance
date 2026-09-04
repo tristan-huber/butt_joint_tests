@@ -5297,6 +5297,304 @@
       "global": true
     },
     {
+      "atomType": "Molecule",
+      "x": 0.6,
+      "y": 0.7,
+      "uniqueID": "id-4086",
+      "name": "Molecule",
+      "ioValues": [
+        {
+          "name": "shape",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 1,
+          "y": 0.5,
+          "uniqueID": "id-4088",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0,
+          "y": 0.4,
+          "uniqueID": "id-4090",
+          "name": "shape",
+          "type": "geometry"
+        },
+        {
+          "atomType": "GitHubMolecule",
+          "x": 0.2,
+          "y": 0.6,
+          "uniqueID": "id-4098",
+          "name": "Sphere",
+          "ioValues": [
+            {
+              "name": "Radius",
+              "ioValue": 0.2755,
+              "currentEquation": "0.2755"
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-4094",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.5,
+              "y": 0.5,
+              "uniqueID": "id-4095",
+              "ioValues": [
+                {
+                  "name": "radius",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ],
+              "interpreterVersion": 0,
+              "code": "//Inputs:[radius];\n\n//let shape = replicad.makeSphere(radius)\n\nconst newPlane = new replicad.Plane().pivot(0, 'Y');\n\n return { geometry: [replicad.makeSphere(radius)], tags: [],\n      color: '#A3CE5B',\n      bom:[],\n      plane: newPlane}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+            },
+            {
+              "atomType": "Input",
+              "x": 0,
+              "y": 0.1,
+              "uniqueID": "id-4096",
+              "name": "Radius",
+              "type": "number"
+            },
+            {
+              "atomType": "Constant",
+              "x": 0.2,
+              "y": 0.9,
+              "uniqueID": "id-4097",
+              "value": 10
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-4095",
+              "ap2ID": "id-4094"
+            },
+            {
+              "ap2Name": "radius",
+              "ap1ID": "id-4096",
+              "ap2ID": "id-4095"
+            }
+          ],
+          "parentRepo": {
+            "lastFoundGit": "2026-09-04T10:23:39.140Z",
+            "repoName": "Sphere",
+            "dateCreated": "2024-11-13T19:37:04Z",
+            "likes": 0,
+            "readMe": "https://raw.githubusercontent.com/alzatin/Sphere/master/README.md?sanitize=true",
+            "yyyy": 2025,
+            "topMoleculeID": 1731526624936,
+            "githubMoleculesUsed": [],
+            "html_url": "https://github.com/BarbourSmith/Sphere",
+            "topics": [],
+            "pullRequests": [],
+            "parentRepo": "BarbourSmith/Sphere",
+            "forks": 1,
+            "dateModified": "03/05/2025",
+            "ranking": 2.6,
+            "searchField": "sphere alzatin",
+            "owner": "alzatin",
+            "description": "Creates a sphere from the input radius",
+            "contentURL": "https://raw.githubusercontent.com/alzatin/Sphere/master/project.abundance?sanitize=true",
+            "svgURL": "https://raw.githubusercontent.com/alzatin/Sphere/master/project.svg?sanitize=true",
+            "isLocal": false
+          },
+          "unitsKey": "Inches",
+          "fileTypeVersion": 1,
+          "lastReloadedFromGithubAt": 1788542154943
+        },
+        {
+          "atomType": "Circle",
+          "x": 0.2,
+          "y": 0.9,
+          "uniqueID": "id-4108",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 0.3857,
+              "currentEquation": "marbleradius * 1.4"
+            }
+          ]
+        },
+        {
+          "atomType": "Constant",
+          "x": 0.1,
+          "y": 0.7,
+          "uniqueID": "id-4111",
+          "name": "marbleradius",
+          "value": 0.2755
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.3,
+          "y": 0.8,
+          "uniqueID": "id-4113",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "height",
+              "ioValue": -0.30305000000000004,
+              "currentEquation": "-marbleradius * 1.1"
+            }
+          ]
+        },
+        {
+          "atomType": "Difference",
+          "x": 0.4,
+          "y": 0.8,
+          "uniqueID": "id-4117",
+          "ioValues": [
+            {
+              "name": "retain",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "remove",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Color",
+          "x": 0.5,
+          "y": 0.9,
+          "uniqueID": "id-4121",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "selectedColor": "Keep Out"
+        },
+        {
+          "atomType": "Move",
+          "x": 0.6,
+          "y": 0.5,
+          "uniqueID": "id-4124",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": 0
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Tag",
+          "x": 0.3,
+          "y": 0.6,
+          "uniqueID": "id-4130",
+          "name": "marble",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "tags": [
+            "marble"
+          ]
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.5,
+          "y": 0.7,
+          "uniqueID": "id-4133",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 2",
+              "ioValue": null
+            }
+          ]
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "remove",
+          "ap1ID": "id-4098",
+          "ap2ID": "id-4117"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-4098",
+          "ap2ID": "id-4130"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-4108",
+          "ap2ID": "id-4113"
+        },
+        {
+          "ap2Name": "Radius",
+          "ap1ID": "id-4111",
+          "ap2ID": "id-4098"
+        },
+        {
+          "ap2Name": "retain",
+          "ap1ID": "id-4113",
+          "ap2ID": "id-4117"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-4117",
+          "ap2ID": "id-4121"
+        },
+        {
+          "ap2Name": "Shape 2",
+          "ap1ID": "id-4121",
+          "ap2ID": "id-4133"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-4130",
+          "ap2ID": "id-4133"
+        }
+      ],
+      "fileTypeVersion": 1
+    },
+    {
       "atomType": "Output",
       "x": 1,
       "y": 0.5,
