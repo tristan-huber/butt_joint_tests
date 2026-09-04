@@ -5209,7 +5209,7 @@
     },
     {
       "atomType": "CutOrient",
-      "x": 0.7,
+      "x": 0.6,
       "y": 0.7,
       "uniqueID": "id-2844",
       "name": "Cut Orient",
@@ -6099,6 +6099,100 @@
       ]
     },
     {
+      "atomType": "GitHubMolecule",
+      "x": 0.7,
+      "y": 0.6,
+      "uniqueID": "id-4231",
+      "name": "ExtractParts",
+      "ioValues": [
+        {
+          "name": "Input",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 1,
+          "y": 0.5,
+          "uniqueID": "id-4228",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0,
+          "y": 0.1,
+          "uniqueID": "id-4229",
+          "type": "partselect",
+          "selectedLeafIndexes": [
+            1
+          ]
+        },
+        {
+          "atomType": "Code",
+          "x": 0.4,
+          "y": 0.8,
+          "uniqueID": "id-4230",
+          "ioValues": [
+            {
+              "name": "input",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "interpreterVersion": 1,
+          "code": "function run(input: Assembly) {\n  const res = input.onLeafs((leaf) => {\n    if (leaf.selection?.part && leaf.selection.part) {\n      return leaf;\n    } else {\n      return null;\n    }\n  })\n  console.log(res)\n  return res;\n}",
+          "compiledCode": "\"use strict\";\nfunction run(input) {\n    const res = input.onLeafs((leaf) => {\n        if (leaf.selection?.part && leaf.selection.part) {\n            return leaf;\n        }\n        else {\n            return null;\n        }\n    });\n    console.log(res);\n    return res;\n}\n"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "input",
+          "ap1ID": "id-4229",
+          "ap2ID": "id-4230"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-4230",
+          "ap2ID": "id-4228"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2026-09-04T18:23:39.031Z",
+        "privateRepo": false,
+        "repoName": "ExtractParts",
+        "dateCreated": "2026-07-24T20:42:33Z",
+        "likes": 0,
+        "readMe": "https://raw.githubusercontent.com/tristan-huber/ExtractParts/master/README.md?sanitize=true",
+        "yyyy": 2026,
+        "topMoleculeID": "id-34890",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/tristan-huber/ExtractParts",
+        "topics": [
+          "abundance-tool"
+        ],
+        "pullRequests": [],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739821",
+        "ranking": 2.4,
+        "searchField": "extractparts tristan-huber select sub-component parts of an assembly by click and return a new assembly with just the selected parts abundance-tool",
+        "owner": "tristan-huber",
+        "description": "Select sub-component parts of an assembly by click and return a new assembly with just the selected parts",
+        "contentURL": "https://raw.githubusercontent.com/tristan-huber/ExtractParts/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/tristan-huber/ExtractParts/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Unitless",
+      "fileTypeVersion": 1,
+      "lastReloadedFromGithubAt": 1788551010009
+    },
+    {
       "atomType": "Output",
       "x": 1,
       "y": 0.5,
@@ -6175,6 +6269,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-2844",
       "ap2ID": "id-2851"
+    },
+    {
+      "ap2Name": "Input",
+      "ap1ID": "id-2844",
+      "ap2ID": "id-4231"
     },
     {
       "ap2Name": "geometry",
