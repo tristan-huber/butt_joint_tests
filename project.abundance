@@ -7011,7 +7011,7 @@
           "ioValues": [
             {
               "name": "step",
-              "ioValue": 0.8699625856076388
+              "ioValue": 1.7399251712152777
             }
           ],
           "currentEquation": "ceil(width / step)"
@@ -7025,7 +7025,7 @@
           "ioValues": [
             {
               "name": "Number",
-              "ioValue": 4
+              "ioValue": 6
             },
             {
               "name": "Geometry",
@@ -7033,7 +7033,7 @@
             },
             {
               "name": "distX",
-              "ioValue": 11
+              "ioValue": 1.7399251712152777
             },
             {
               "name": "distY",
@@ -7188,11 +7188,11 @@
                 },
                 {
                   "name": "count",
-                  "ioValue": 4
+                  "ioValue": 6
                 },
                 {
                   "name": "distX",
-                  "ioValue": 11
+                  "ioValue": 1.7399251712152777
                 },
                 {
                   "name": "distY",
@@ -7342,6 +7342,20 @@
           "unitsKey": "MM",
           "fileTypeVersion": 1,
           "lastReloadedFromGithubAt": 1788554010172
+        },
+        {
+          "atomType": "Equation",
+          "x": 0.6,
+          "y": 0.2,
+          "uniqueID": "id-4655",
+          "name": "x * 2",
+          "ioValues": [
+            {
+              "name": "x",
+              "ioValue": 0.8699625856076388
+            }
+          ],
+          "currentEquation": "x * 2"
         }
       ],
       "allConnectors": [
@@ -7446,9 +7460,9 @@
           "ap2ID": "id-4576"
         },
         {
-          "ap2Name": "step",
+          "ap2Name": "x",
           "ap1ID": "id-4566",
-          "ap2ID": "id-4590"
+          "ap2ID": "id-4655"
         },
         {
           "ap2Name": "geometry",
@@ -7461,16 +7475,30 @@
           "ap2ID": "id-4582"
         },
         {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-4582",
-          "ap2ID": "id-4250"
-        },
-        {
           "ap2Name": "Geometry",
           "ap1ID": "id-4582",
           "ap2ID": "id-4611"
         },
-        null
+        {
+          "ap2Name": "Number",
+          "ap1ID": "id-4590",
+          "ap2ID": "id-4611"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-4611",
+          "ap2ID": "id-4250"
+        },
+        {
+          "ap2Name": "step",
+          "ap1ID": "id-4655",
+          "ap2ID": "id-4590"
+        },
+        {
+          "ap2Name": "distX",
+          "ap1ID": "id-4655",
+          "ap2ID": "id-4611"
+        }
       ],
       "fileTypeVersion": 1
     },
