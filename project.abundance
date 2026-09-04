@@ -14,7 +14,7 @@
   "allAtoms": [
     {
       "atomType": "Assembly",
-      "x": 0.6,
+      "x": 0.7,
       "y": 0.3,
       "uniqueID": "id-1471",
       "ioValues": [
@@ -5298,8 +5298,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.6,
-      "y": 0.7,
+      "x": 0.5,
+      "y": 0.1,
       "uniqueID": "id-4086",
       "name": "Molecule",
       "ioValues": [
@@ -6084,6 +6084,21 @@
       "fileTypeVersion": 1
     },
     {
+      "atomType": "Tag",
+      "x": 0.6,
+      "y": 0.1,
+      "uniqueID": "id-4221",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tags": [
+        ""
+      ]
+    },
+    {
       "atomType": "Output",
       "x": 1,
       "y": 0.5,
@@ -6157,6 +6172,11 @@
       "ap2ID": "id-1471"
     },
     {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2823",
+      "ap2ID": "id-4221"
+    },
+    {
       "ap2Name": "Shape 3",
       "ap1ID": "id-2829",
       "ap2ID": "id-1471"
@@ -6210,7 +6230,8 @@
       "ap2Name": "geometry",
       "ap1ID": "id-4086",
       "ap2ID": "id-2823"
-    }
+    },
+    null
   ],
   "unitsKey": "Inches",
   "fileTypeVersion": 1,
