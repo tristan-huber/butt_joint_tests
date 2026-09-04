@@ -5245,15 +5245,16 @@
         },
         {
           "name": "Passes",
-          "ioValue": 3
+          "ioValue": 2
         },
         {
           "name": "Speed",
-          "ioValue": 2500
+          "ioValue": 2500,
+          "currentEquation": "2500"
         },
         {
           "name": "Cut Through",
-          "ioValue": 0.05
+          "ioValue": 0
         },
         {
           "name": "Part Name",
@@ -6266,11 +6267,6 @@
       "ap2ID": "id-4224"
     },
     {
-      "ap2Name": "geometry",
-      "ap1ID": "id-2844",
-      "ap2ID": "id-2851"
-    },
-    {
       "ap2Name": "Input",
       "ap1ID": "id-2844",
       "ap2ID": "id-4231"
@@ -6334,6 +6330,11 @@
       "ap2Name": "Shape 3",
       "ap1ID": "id-4224",
       "ap2ID": "id-1471"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-4231",
+      "ap2ID": "id-2851"
     }
   ],
   "unitsKey": "Inches",
