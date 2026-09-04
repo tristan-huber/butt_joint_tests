@@ -17,11 +17,7 @@ Puzzle joint: fast to cut, durable.
 
 Dogbone: maximize length b/c joint is incut only. Medium cut time
 
-Stepped Scarf: strong, very slow to cut. 
-
-![readme](/readmeid-2867.svg?v=ioq1i)
-
-
+Stepped Scarf: strong, very slow to cut.
 
 
 
