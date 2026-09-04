@@ -7,7 +7,8 @@
   "ioValues": [
     {
       "name": "materialThickness",
-      "ioValue": 0.25
+      "ioValue": 0.25,
+      "currentEquation": "0.25"
     }
   ],
   "topLevel": true,
@@ -5224,27 +5225,9 @@
         },
         {
           "downwardFaceIndex": 1
-        },
-        {
-          "downwardFaceIndex": 15
-        },
-        {
-          "downwardFaceIndex": 0
-        },
-        {
-          "downwardFaceIndex": 12
-        },
-        {
-          "downwardFaceIndex": 12
-        },
-        {
-          "downwardFaceIndex": 11
-        },
-        {
-          "downwardFaceIndex": 1
         }
       ],
-      "orientationsForHashed": 8
+      "orientationsForHashed": 2
     },
     {
       "atomType": "Gcode",
@@ -5258,19 +5241,19 @@
         },
         {
           "name": "Tool Size",
-          "ioValue": 0.25
+          "ioValue": 0.125
         },
         {
           "name": "Passes",
-          "ioValue": 1
+          "ioValue": 3
         },
         {
           "name": "Speed",
-          "ioValue": 1500
+          "ioValue": 2500
         },
         {
           "name": "Cut Through",
-          "ioValue": 0
+          "ioValue": 0.05
         },
         {
           "name": "Part Name",
@@ -5965,7 +5948,8 @@
             },
             {
               "name": "zDist",
-              "ioValue": 0
+              "ioValue": -0.05,
+              "currentEquation": "-0.05"
             }
           ]
         },
@@ -6168,11 +6152,6 @@
   ],
   "allConnectors": [
     {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1471",
-      "ap2ID": "id-2844"
-    },
-    {
       "ap2Name": "number or geometry",
       "ap1ID": "id-1471",
       "ap2ID": "id-909"
@@ -6246,6 +6225,11 @@
       "ap2Name": "Shape 2",
       "ap1ID": "id-4221",
       "ap2ID": "id-1471"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-4221",
+      "ap2ID": "id-2844"
     },
     {
       "ap2Name": "Shape 3",
