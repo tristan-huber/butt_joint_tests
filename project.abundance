@@ -5418,8 +5418,8 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 0.3857,
-              "currentEquation": "marbleradius * 1.4"
+              "ioValue": 0.41325,
+              "currentEquation": "marbleradius * 1.5"
             }
           ]
         },
@@ -5497,8 +5497,8 @@
             },
             {
               "name": "zDist",
-              "ioValue": 0.448,
-              "currentEquation": ".198 + materialThickness"
+              "ioValue": 0.47,
+              "currentEquation": ".22 + materialThickness"
             }
           ]
         },
@@ -5972,6 +5972,22 @@
           ],
           "includeUntagged": true,
           "notKeepOut": false
+        },
+        {
+          "atomType": "Rectangle",
+          "x": 0.5,
+          "y": 0.5,
+          "uniqueID": "id-4240",
+          "ioValues": [
+            {
+              "name": "x length",
+              "ioValue": 10
+            },
+            {
+              "name": "y length",
+              "ioValue": 10
+            }
+          ]
         }
       ],
       "allConnectors": [
