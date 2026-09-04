@@ -99,7 +99,7 @@
             },
             {
               "name": "yDist",
-              "ioValue": -3.0000001000000007
+              "ioValue": -3.100000100000001
             },
             {
               "name": "zDist",
@@ -250,14 +250,14 @@
           "x": 0.3,
           "y": 0.8,
           "uniqueID": "id-2201",
-          "name": "-w / 2",
+          "name": "-w / 2 - 0.1",
           "ioValues": [
             {
               "name": "w",
               "ioValue": 6.0000002000000014
             }
           ],
-          "currentEquation": "-w / 2"
+          "currentEquation": "-w / 2 - 0.1"
         },
         {
           "atomType": "GitHubMolecule",
@@ -2766,15 +2766,16 @@
           "ioValues": [
             {
               "name": "length",
-              "ioValue": 5
+              "ioValue": 4
             },
             {
               "name": "width",
-              "ioValue": 1.5
+              "ioValue": 1.5,
+              "currentEquation": "1.5"
             },
             {
               "name": "tolerance",
-              "ioValue": 0.01
+              "ioValue": 0.02
             },
             {
               "name": "thickness",
@@ -2831,7 +2832,7 @@
                 },
                 {
                   "name": "y length",
-                  "ioValue": 5,
+                  "ioValue": 4,
                   "currentEquation": "length"
                 }
               ]
@@ -2866,7 +2867,7 @@
                 },
                 {
                   "name": "yDist",
-                  "ioValue": -2.125,
+                  "ioValue": -1.625,
                   "currentEquation": "-(length - width / 2) / 2"
                 },
                 {
@@ -2909,7 +2910,7 @@
                 },
                 {
                   "name": "yDist",
-                  "ioValue": -2.125,
+                  "ioValue": -1.625,
                   "currentEquation": "-(length - width / 2) / 2"
                 },
                 {
@@ -3027,7 +3028,7 @@
                 },
                 {
                   "name": "yDist",
-                  "ioValue": -2.125,
+                  "ioValue": -1.625,
                   "currentEquation": "-(length - width / 2) / 2"
                 },
                 {
@@ -3067,7 +3068,7 @@
                   "ioValue": {
                     "geometry": [
                       {
-                        "geometry": "cut-cut-move-circle-0.375-0.375--2.125-0-rectangle-0.75-5-move-circle-0.375--0.375--2.125-0",
+                        "geometry": "cut-cut-move-circle-0.375-0.375--1.625-0-rectangle-0.75-4-move-circle-0.375--0.375--1.625-0",
                         "dimension": "2D",
                         "tags": [],
                         "plane": {
@@ -3092,18 +3093,18 @@
                         "boundingBox": {
                           "min": [
                             -0.000001,
-                            -2.500001,
+                            -2.000001,
                             0
                           ],
                           "max": [
                             0.750001,
-                            -1.749999,
+                            -1.249999,
                             0
                           ]
                         }
                       },
                       {
-                        "geometry": "cut-rectangle-0.75-5-move-circle-0.375--0.375--2.125-0",
+                        "geometry": "cut-rectangle-0.75-4-move-circle-0.375--0.375--1.625-0",
                         "dimension": "2D",
                         "plane": {
                           "origin": [
@@ -3128,18 +3129,18 @@
                         "boundingBox": {
                           "min": [
                             -0.375001,
-                            -2.500001,
+                            -2.000001,
                             0
                           ],
                           "max": [
                             0.375001,
-                            2.500001,
+                            2.000001,
                             0
                           ]
                         }
                       },
                       {
-                        "geometry": "move-circle-0.375--0.375--2.125-0",
+                        "geometry": "move-circle-0.375--0.375--1.625-0",
                         "dimension": "2D",
                         "tags": [],
                         "plane": {
@@ -3164,12 +3165,12 @@
                         "boundingBox": {
                           "min": [
                             -0.750001,
-                            -2.500001,
+                            -2.000001,
                             0
                           ],
                           "max": [
                             0.000001,
-                            -1.749999,
+                            -1.249999,
                             0
                           ]
                         }
@@ -3200,12 +3201,12 @@
                     "boundingBox": {
                       "min": [
                         -0.750001,
-                        -2.500001,
+                        -2.000001,
                         0
                       ],
                       "max": [
                         0.750001,
-                        2.500001,
+                        2.000001,
                         0
                       ]
                     }
@@ -3225,7 +3226,7 @@
                   "ioValue": {
                     "geometry": [
                       {
-                        "geometry": "cut-cut-move-circle-0.375-0.375--2.125-0-rectangle-0.75-5-move-circle-0.375--0.375--2.125-0",
+                        "geometry": "cut-cut-move-circle-0.375-0.375--1.625-0-rectangle-0.75-4-move-circle-0.375--0.375--1.625-0",
                         "dimension": "2D",
                         "tags": [],
                         "plane": {
@@ -3250,18 +3251,18 @@
                         "boundingBox": {
                           "min": [
                             -0.000001,
-                            -2.500001,
+                            -2.000001,
                             0
                           ],
                           "max": [
                             0.750001,
-                            -1.749999,
+                            -1.249999,
                             0
                           ]
                         }
                       },
                       {
-                        "geometry": "cut-rectangle-0.75-5-move-circle-0.375--0.375--2.125-0",
+                        "geometry": "cut-rectangle-0.75-4-move-circle-0.375--0.375--1.625-0",
                         "dimension": "2D",
                         "plane": {
                           "origin": [
@@ -3286,18 +3287,18 @@
                         "boundingBox": {
                           "min": [
                             -0.375001,
-                            -2.500001,
+                            -2.000001,
                             0
                           ],
                           "max": [
                             0.375001,
-                            2.500001,
+                            2.000001,
                             0
                           ]
                         }
                       },
                       {
-                        "geometry": "move-circle-0.375--0.375--2.125-0",
+                        "geometry": "move-circle-0.375--0.375--1.625-0",
                         "dimension": "2D",
                         "tags": [],
                         "plane": {
@@ -3322,12 +3323,12 @@
                         "boundingBox": {
                           "min": [
                             -0.750001,
-                            -2.500001,
+                            -2.000001,
                             0
                           ],
                           "max": [
                             0.000001,
-                            -1.749999,
+                            -1.249999,
                             0
                           ]
                         }
@@ -3358,12 +3359,12 @@
                     "boundingBox": {
                       "min": [
                         -0.750001,
-                        -2.500001,
+                        -2.000001,
                         0
                       ],
                       "max": [
                         0.750001,
-                        2.500001,
+                        2.000001,
                         0
                       ]
                     }
@@ -3372,7 +3373,7 @@
                 {
                   "name": "Shape 2",
                   "ioValue": {
-                    "geometry": "9f343ed8-0",
+                    "geometry": "e7447784-0",
                     "color": "#aad7f2",
                     "tags": [],
                     "bom": [],
@@ -3413,7 +3414,7 @@
                 },
                 {
                   "name": "Offset",
-                  "ioValue": 0.01,
+                  "ioValue": 0.02,
                   "currentEquation": "tolerance"
                 }
               ],
@@ -3458,7 +3459,7 @@
                     },
                     {
                       "name": "distance",
-                      "ioValue": 0.01
+                      "ioValue": 0.02
                     }
                   ],
                   "interpreterVersion": 1,
@@ -6285,6 +6286,34 @@
       "lastReloadedFromGithubAt": 1788551010009
     },
     {
+      "atomType": "CutOrient",
+      "x": 0.5,
+      "y": 0.8,
+      "uniqueID": "id-4245",
+      "name": "Cut Orient",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "orientations": [
+        {
+          "downwardFaceIndex": 15
+        },
+        {
+          "downwardFaceIndex": 0
+        },
+        {
+          "downwardFaceIndex": 12
+        },
+        {
+          "downwardFaceIndex": 12
+        }
+      ],
+      "orientationsForHashed": 4
+    },
+    {
       "atomType": "Output",
       "x": 1,
       "y": 0.5,
@@ -6364,14 +6393,14 @@
       "ap2ID": "id-4224"
     },
     {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2829",
+      "ap2ID": "id-4245"
+    },
+    {
       "ap2Name": "Input",
       "ap1ID": "id-2844",
       "ap2ID": "id-4231"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-2844",
-      "ap2ID": "id-2851"
     },
     {
       "ap2Name": "geometry",
@@ -6427,6 +6456,11 @@
       "ap2Name": "Shape 3",
       "ap1ID": "id-4224",
       "ap2ID": "id-1471"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-4245",
+      "ap2ID": "id-2851"
     }
   ],
   "unitsKey": "Inches",
