@@ -19,7 +19,7 @@ Dogbone: maximize length b/c joint is incut only. Medium cut time
 
 Stepped Scarf: strong, very slow to cut. 
 
-![readme](/readmeid-2867.svg?v=nowxd6n)
+![readme](/readmeid-2867.svg?v=nav667t)
 
 
 
