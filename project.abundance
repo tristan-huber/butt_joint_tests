@@ -5337,8 +5337,8 @@
         },
         {
           "name": "Part Name",
-          "ioValue": "dogbone",
-          "currentEquation": "dogbone"
+          "ioValue": "dogbone-2",
+          "currentEquation": "dogbone-2"
         }
       ],
       "partName": "butt_joint_tests",
@@ -7839,8 +7839,7 @@
           "uniqueID": "id-6410",
           "type": "partselect",
           "selectedLeafIndexes": [
-            2,
-            3
+            0
           ]
         },
         {
@@ -7913,8 +7912,7 @@
         },
         {
           "name": "xDist",
-          "ioValue": -12,
-          "currentEquation": "-12"
+          "ioValue": 0
         },
         {
           "name": "yDist",
