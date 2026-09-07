@@ -2293,7 +2293,7 @@
         {
           "atomType": "Assembly",
           "x": 0.4,
-          "y": 0.4,
+          "y": 0.3,
           "uniqueID": "id-2214",
           "ioValues": [
             {
@@ -2333,7 +2333,7 @@
         {
           "atomType": "GitHubMolecule",
           "x": 0.3,
-          "y": 0.5,
+          "y": 0.7,
           "uniqueID": "id-2216",
           "name": "Linear-Pattern",
           "ioValues": [
@@ -2759,7 +2759,7 @@
         {
           "atomType": "GitHubMolecule",
           "x": 0.2,
-          "y": 0.4,
+          "y": 0.6,
           "uniqueID": "id-2237",
           "name": "dogbone_joint",
           "ioValues": [
