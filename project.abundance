@@ -7872,101 +7872,6 @@
       ]
     },
     {
-      "atomType": "GitHubMolecule",
-      "x": 0.7,
-      "y": 0.7,
-      "uniqueID": "id-6412",
-      "name": "ExtractParts",
-      "ioValues": [
-        {
-          "name": "Input",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ],
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 1,
-          "y": 0.5,
-          "uniqueID": "id-6409",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.15384615384615385,
-          "uniqueID": "id-6410",
-          "type": "partselect",
-          "options": [],
-          "selectedLeafIndexes": [
-            0
-          ]
-        },
-        {
-          "atomType": "Code",
-          "x": 0.4,
-          "y": 0.8,
-          "uniqueID": "id-6411",
-          "ioValues": [
-            {
-              "name": "input",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "function run(input: Assembly) {\n  const res = input.onLeafs((leaf) => {\n    if (leaf.selection?.part && leaf.selection.part) {\n      return leaf;\n    } else {\n      return null;\n    }\n  })\n  console.log(res)\n  return res;\n}",
-          "compiledCode": "\"use strict\";\nfunction run(input) {\n    const res = input.onLeafs((leaf) => {\n        if (leaf.selection?.part && leaf.selection.part) {\n            return leaf;\n        }\n        else {\n            return null;\n        }\n    });\n    console.log(res);\n    return res;\n}\n"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "input",
-          "ap1ID": "id-6410",
-          "ap2ID": "id-6411"
-        },
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-6411",
-          "ap2ID": "id-6409"
-        }
-      ],
-      "parentRepo": {
-        "lastFoundGit": "2026-09-07T18:23:39.102Z",
-        "privateRepo": false,
-        "repoName": "ExtractParts",
-        "dateCreated": "2026-07-24T20:42:33Z",
-        "likes": 0,
-        "readMe": "https://raw.githubusercontent.com/tristan-huber/ExtractParts/master/README.md?sanitize=true",
-        "yyyy": 2026,
-        "topMoleculeID": "id-34890",
-        "githubMoleculesUsed": [],
-        "html_url": "https://github.com/tristan-huber/ExtractParts",
-        "topics": [
-          "abundance-tool"
-        ],
-        "pullRequests": [],
-        "parentRepo": null,
-        "forks": 0,
-        "dateModified": "739821",
-        "ranking": 2.4,
-        "searchField": "extractparts tristan-huber select sub-component parts of an assembly by click and return a new assembly with just the selected parts abundance-tool",
-        "owner": "tristan-huber",
-        "description": "Select sub-component parts of an assembly by click and return a new assembly with just the selected parts",
-        "contentURL": "https://raw.githubusercontent.com/tristan-huber/ExtractParts/master/project.abundance?sanitize=true",
-        "svgURL": "https://raw.githubusercontent.com/tristan-huber/ExtractParts/master/project.svg?sanitize=true",
-        "isLocal": false
-      },
-      "unitsKey": "Unitless",
-      "fileTypeVersion": 1,
-      "lastReloadedFromGithubAt": 1788823025669
-    },
-    {
       "atomType": "Move",
       "x": 0.7,
       "y": 0.9,
@@ -7991,24 +7896,18 @@
       ]
     },
     {
-      "atomType": "GitHubMolecule",
-      "x": 0.7845052083333334,
-      "y": 0.38285714285714284,
-      "uniqueID": "id-7295",
-      "name": "Width",
-      "ioValues": [
-        {
-          "name": "Shape",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ],
+      "atomType": "Molecule",
+      "x": 0.8565104166666667,
+      "y": 0.6235714285714284,
+      "uniqueID": "id-7314",
+      "name": "New Molecule",
       "topLevel": false,
       "allAtoms": [
         {
           "atomType": "Output",
           "x": 0.98,
           "y": 0.5,
-          "uniqueID": "id-7292",
+          "uniqueID": "id-7316",
           "ioValues": [
             {
               "name": "number or geometry",
@@ -8017,110 +7916,311 @@
           ]
         },
         {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.15384615384615385,
-          "uniqueID": "id-7293",
-          "name": "Shape",
-          "type": "geometry",
-          "options": []
-        },
-        {
-          "atomType": "Code",
-          "x": 0.380178716490658,
-          "y": 0.47632311977715874,
-          "uniqueID": "id-7294",
+          "atomType": "GitHubMolecule",
+          "x": 0.17252604166666669,
+          "y": 0.24285714285714288,
+          "uniqueID": "id-7318",
+          "name": "ExtractParts",
           "ioValues": [
             {
-              "name": "A",
+              "name": "Input",
               "ioValue": "__GEOMETRY_INPUT__"
             }
           ],
-          "interpreterVersion": 0,
-          "code": "/**\n Inputs for this Code Atom:\n - Takes a single geometry input \"A\" and returns its width (X size) as measured by the bounding box.\n*/\nInputs = [\n  { inputName: \"A\", type: \"geometry\", defaultValue: null }\n]\n\nif (!A) {\n  // No input provided — return null to indicate absence.\n  return null\n}\n\n// Get bounding box of A. boundsA.min and boundsA.max are arrays [x, y, z]\nlet boundsA = await GetBounds(A);\nlet min = boundsA.min;\nlet max = boundsA.max;\n\n// Compute width along X (maxX - minX)\nlet width = max[0] - min[0];\n\n// Ensure a non-negative numeric result\nwidth = typeof width === 'number' && isFinite(width) ? Math.max(0, width) : null;\n\nreturn width;"
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 1,
+              "y": 0.5,
+              "uniqueID": "id-7319",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.15384615384615385,
+              "uniqueID": "id-7320",
+              "type": "partselect",
+              "options": [],
+              "selectedLeafIndexes": []
+            },
+            {
+              "atomType": "Code",
+              "x": 0.4,
+              "y": 0.8,
+              "uniqueID": "id-7321",
+              "ioValues": [
+                {
+                  "name": "input",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "function run(input: Assembly) {\n  const res = input.onLeafs((leaf) => {\n    if (leaf.selection?.part && leaf.selection.part) {\n      return leaf;\n    } else {\n      return null;\n    }\n  })\n  console.log(res)\n  return res;\n}",
+              "compiledCode": "\"use strict\";\nfunction run(input) {\n    const res = input.onLeafs((leaf) => {\n        if (leaf.selection?.part && leaf.selection.part) {\n            return leaf;\n        }\n        else {\n            return null;\n        }\n    });\n    console.log(res);\n    return res;\n}\n"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "input",
+              "ap1ID": "id-7320",
+              "ap2ID": "id-7321"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-7321",
+              "ap2ID": "id-7319"
+            }
+          ],
+          "parentRepo": {
+            "lastFoundGit": "2026-09-07T18:23:39.102Z",
+            "privateRepo": false,
+            "repoName": "ExtractParts",
+            "dateCreated": "2026-07-24T20:42:33Z",
+            "likes": 0,
+            "readMe": "https://raw.githubusercontent.com/tristan-huber/ExtractParts/master/README.md?sanitize=true",
+            "yyyy": 2026,
+            "topMoleculeID": "id-34890",
+            "githubMoleculesUsed": [],
+            "html_url": "https://github.com/tristan-huber/ExtractParts",
+            "topics": [
+              "abundance-tool"
+            ],
+            "pullRequests": [],
+            "parentRepo": null,
+            "forks": 0,
+            "dateModified": "739821",
+            "ranking": 2.4,
+            "searchField": "extractparts tristan-huber select sub-component parts of an assembly by click and return a new assembly with just the selected parts abundance-tool",
+            "owner": "tristan-huber",
+            "description": "Select sub-component parts of an assembly by click and return a new assembly with just the selected parts",
+            "contentURL": "https://raw.githubusercontent.com/tristan-huber/ExtractParts/master/project.abundance?sanitize=true",
+            "svgURL": "https://raw.githubusercontent.com/tristan-huber/ExtractParts/master/project.svg?sanitize=true",
+            "isLocal": false
+          },
+          "unitsKey": "Unitless",
+          "fileTypeVersion": 1,
+          "lastReloadedFromGithubAt": 1788823025669
+        },
+        {
+          "atomType": "GitHubMolecule",
+          "x": 0.39322916666666663,
+          "y": 0.2,
+          "uniqueID": "id-7322",
+          "name": "Width",
+          "ioValues": [
+            {
+              "name": "Shape",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 0.98,
+              "y": 0.5,
+              "uniqueID": "id-7323",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.15384615384615385,
+              "uniqueID": "id-7324",
+              "name": "Shape",
+              "type": "geometry",
+              "options": []
+            },
+            {
+              "atomType": "Code",
+              "x": 0.380178716490658,
+              "y": 0.47632311977715874,
+              "uniqueID": "id-7325",
+              "ioValues": [
+                {
+                  "name": "A",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ],
+              "interpreterVersion": 0,
+              "code": "/**\n Inputs for this Code Atom:\n - Takes a single geometry input \"A\" and returns its width (X size) as measured by the bounding box.\n*/\nInputs = [\n  { inputName: \"A\", type: \"geometry\", defaultValue: null }\n]\n\nif (!A) {\n  // No input provided — return null to indicate absence.\n  return null\n}\n\n// Get bounding box of A. boundsA.min and boundsA.max are arrays [x, y, z]\nlet boundsA = await GetBounds(A);\nlet min = boundsA.min;\nlet max = boundsA.max;\n\n// Compute width along X (maxX - minX)\nlet width = max[0] - min[0];\n\n// Ensure a non-negative numeric result\nwidth = typeof width === 'number' && isFinite(width) ? Math.max(0, width) : null;\n\nreturn width;"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "A",
+              "ap1ID": "id-7324",
+              "ap2ID": "id-7325"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-7325",
+              "ap2ID": "id-7323"
+            }
+          ],
+          "parentRepo": {
+            "lastFoundGit": "2026-09-08T10:23:38.942Z",
+            "privateRepo": false,
+            "repoName": "Width",
+            "dateCreated": "2025-12-04T20:14:11Z",
+            "likes": 0,
+            "readMe": "https://raw.githubusercontent.com/BarbourSmith/Width/master/README.md?sanitize=true",
+            "yyyy": 2025,
+            "topMoleculeID": "id-386",
+            "githubMoleculesUsed": [],
+            "html_url": "https://github.com/BarbourSmith/Width",
+            "topics": [],
+            "pullRequests": [],
+            "parentRepo": null,
+            "forks": 0,
+            "dateModified": "739589",
+            "ranking": 9.6,
+            "searchField": "width barboursmith takes a shape and returns the width as measured by the shapes bounding box in the x direction ",
+            "owner": "BarbourSmith",
+            "description": "Takes a shape and returns the width as measured by the shapes bounding box in the X direction",
+            "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Width/master/project.abundance?sanitize=true",
+            "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Width/master/project.svg?sanitize=true",
+            "isLocal": false
+          },
+          "unitsKey": "MM",
+          "fileTypeVersion": 1,
+          "lastReloadedFromGithubAt": 1788891774924
+        },
+        {
+          "atomType": "Equation",
+          "x": 0.5130208333333334,
+          "y": 0.19142857142857142,
+          "uniqueID": "id-7326",
+          "name": "x + y",
+          "ioValues": [
+            {
+              "name": "x",
+              "ioValue": 6.000000300000002
+            },
+            {
+              "name": "y",
+              "ioValue": 1
+            }
+          ],
+          "currentEquation": "x + y"
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.2903645833333333,
+          "y": 0.22285714285714286,
+          "uniqueID": "id-7327",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "x-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 90
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.3142857142857143,
+          "uniqueID": "id-7356",
+          "options": []
+        },
+        {
+          "atomType": "Rectangle",
+          "x": 0.154296875,
+          "y": 0.6114285714285714,
+          "uniqueID": "id-7359",
+          "ioValues": [
+            {
+              "name": "x length",
+              "ioValue": 1
+            },
+            {
+              "name": "y length",
+              "ioValue": 1
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.3216145833333333,
+          "y": 0.5085714285714286,
+          "uniqueID": "id-7363",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": 5
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
         }
       ],
       "allConnectors": [
         {
-          "ap2Name": "A",
-          "ap1ID": "id-7293",
-          "ap2ID": "id-7294"
+          "ap2Name": "Shape",
+          "ap1ID": "id-7327",
+          "ap2ID": "id-7322"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-7318",
+          "ap2ID": "id-7327"
         },
         {
           "ap2Name": "number or geometry",
-          "ap1ID": "id-7294",
-          "ap2ID": "id-7292"
+          "ap1ID": "id-7318",
+          "ap2ID": "id-7316"
+        },
+        {
+          "ap2Name": "x",
+          "ap1ID": "id-7322",
+          "ap2ID": "id-7326"
+        },
+        {
+          "ap2Name": "Input",
+          "ap1ID": "id-7356",
+          "ap2ID": "id-7318"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-7359",
+          "ap2ID": "id-7363"
         }
       ],
-      "parentRepo": {
-        "lastFoundGit": "2026-09-08T10:23:38.942Z",
-        "privateRepo": false,
-        "repoName": "Width",
-        "dateCreated": "2025-12-04T20:14:11Z",
-        "likes": 0,
-        "readMe": "https://raw.githubusercontent.com/BarbourSmith/Width/master/README.md?sanitize=true",
-        "yyyy": 2025,
-        "topMoleculeID": "id-386",
-        "githubMoleculesUsed": [],
-        "html_url": "https://github.com/BarbourSmith/Width",
-        "topics": [],
-        "pullRequests": [],
-        "parentRepo": null,
-        "forks": 0,
-        "dateModified": "739589",
-        "ranking": 9.6,
-        "searchField": "width barboursmith takes a shape and returns the width as measured by the shapes bounding box in the x direction ",
-        "owner": "BarbourSmith",
-        "description": "Takes a shape and returns the width as measured by the shapes bounding box in the X direction",
-        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Width/master/project.abundance?sanitize=true",
-        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Width/master/project.svg?sanitize=true",
-        "isLocal": false
-      },
-      "unitsKey": "MM",
-      "fileTypeVersion": 1,
-      "lastReloadedFromGithubAt": 1788891774924
-    },
-    {
-      "atomType": "Equation",
-      "x": 0.919921875,
-      "y": 0.7257142857142858,
-      "uniqueID": "id-7304",
-      "name": "x + y",
-      "ioValues": [
-        {
-          "name": "x",
-          "ioValue": 5.9950003
-        },
-        {
-          "name": "y",
-          "ioValue": 1
-        }
-      ],
-      "currentEquation": "x + y"
-    },
-    {
-      "atomType": "Rotate",
-      "x": 0.8216145833333333,
-      "y": 0.8857142857142857,
-      "uniqueID": "id-7308",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "x-axis degrees",
-          "ioValue": 0
-        },
-        {
-          "name": "y-axis degrees",
-          "ioValue": 0
-        },
-        {
-          "name": "z-axis degrees",
-          "ioValue": 0
-        }
-      ]
+      "fileTypeVersion": 1
     },
     {
       "atomType": "Output",
@@ -8199,7 +8299,7 @@
     {
       "ap2Name": "Input",
       "ap1ID": "id-2844",
-      "ap2ID": "id-6412"
+      "ap2ID": "id-7314"
     },
     {
       "ap2Name": "Shape 2",
@@ -8283,21 +8383,6 @@
     },
     {
       "ap2Name": "geometry",
-      "ap1ID": "id-6412",
-      "ap2ID": "id-6421"
-    },
-    {
-      "ap2Name": "Shape",
-      "ap1ID": "id-6412",
-      "ap2ID": "id-7295"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-6412",
-      "ap2ID": "id-7308"
-    },
-    {
-      "ap2Name": "geometry",
       "ap1ID": "id-4248",
       "ap2ID": "id-4659"
     },
@@ -8325,11 +8410,6 @@
       "ap2Name": "geometry",
       "ap1ID": "id-1476",
       "ap2ID": "id-2823"
-    },
-    {
-      "ap2Name": "x",
-      "ap1ID": "id-7295",
-      "ap2ID": "id-7304"
     }
   ],
   "unitsKey": "Inches",
