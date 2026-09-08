@@ -7904,7 +7904,9 @@
           "uniqueID": "id-6410",
           "type": "partselect",
           "options": [],
-          "selectedLeafIndexes": []
+          "selectedLeafIndexes": [
+            0
+          ]
         },
         {
           "atomType": "Code",
@@ -7984,6 +7986,138 @@
         },
         {
           "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.7845052083333334,
+      "y": 0.38285714285714284,
+      "uniqueID": "id-7295",
+      "name": "Width",
+      "ioValues": [
+        {
+          "name": "Shape",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-7292",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-7293",
+          "name": "Shape",
+          "type": "geometry",
+          "options": []
+        },
+        {
+          "atomType": "Code",
+          "x": 0.380178716490658,
+          "y": 0.47632311977715874,
+          "uniqueID": "id-7294",
+          "ioValues": [
+            {
+              "name": "A",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "interpreterVersion": 0,
+          "code": "/**\n Inputs for this Code Atom:\n - Takes a single geometry input \"A\" and returns its width (X size) as measured by the bounding box.\n*/\nInputs = [\n  { inputName: \"A\", type: \"geometry\", defaultValue: null }\n]\n\nif (!A) {\n  // No input provided — return null to indicate absence.\n  return null\n}\n\n// Get bounding box of A. boundsA.min and boundsA.max are arrays [x, y, z]\nlet boundsA = await GetBounds(A);\nlet min = boundsA.min;\nlet max = boundsA.max;\n\n// Compute width along X (maxX - minX)\nlet width = max[0] - min[0];\n\n// Ensure a non-negative numeric result\nwidth = typeof width === 'number' && isFinite(width) ? Math.max(0, width) : null;\n\nreturn width;"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "A",
+          "ap1ID": "id-7293",
+          "ap2ID": "id-7294"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-7294",
+          "ap2ID": "id-7292"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2026-09-08T10:23:38.942Z",
+        "privateRepo": false,
+        "repoName": "Width",
+        "dateCreated": "2025-12-04T20:14:11Z",
+        "likes": 0,
+        "readMe": "https://raw.githubusercontent.com/BarbourSmith/Width/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": "id-386",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/BarbourSmith/Width",
+        "topics": [],
+        "pullRequests": [],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739589",
+        "ranking": 9.6,
+        "searchField": "width barboursmith takes a shape and returns the width as measured by the shapes bounding box in the x direction ",
+        "owner": "BarbourSmith",
+        "description": "Takes a shape and returns the width as measured by the shapes bounding box in the X direction",
+        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Width/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Width/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "MM",
+      "fileTypeVersion": 1,
+      "lastReloadedFromGithubAt": 1788891774924
+    },
+    {
+      "atomType": "Equation",
+      "x": 0.919921875,
+      "y": 0.7257142857142858,
+      "uniqueID": "id-7304",
+      "name": "x + y",
+      "ioValues": [
+        {
+          "name": "x",
+          "ioValue": 5.9950003
+        },
+        {
+          "name": "y",
+          "ioValue": 1
+        }
+      ],
+      "currentEquation": "x + y"
+    },
+    {
+      "atomType": "Rotate",
+      "x": 0.8216145833333333,
+      "y": 0.8857142857142857,
+      "uniqueID": "id-7308",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "x-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "z-axis degrees",
           "ioValue": 0
         }
       ]
@@ -8153,6 +8287,16 @@
       "ap2ID": "id-6421"
     },
     {
+      "ap2Name": "Shape",
+      "ap1ID": "id-6412",
+      "ap2ID": "id-7295"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-6412",
+      "ap2ID": "id-7308"
+    },
+    {
       "ap2Name": "geometry",
       "ap1ID": "id-4248",
       "ap2ID": "id-4659"
@@ -8181,6 +8325,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-1476",
       "ap2ID": "id-2823"
+    },
+    {
+      "ap2Name": "x",
+      "ap1ID": "id-7295",
+      "ap2ID": "id-7304"
     }
   ],
   "unitsKey": "Inches",
