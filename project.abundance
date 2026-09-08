@@ -8175,15 +8175,33 @@
             },
             {
               "name": "xDist",
-              "ioValue": 5
+              "ioValue": 5.4,
+              "currentEquation": "5.4"
             },
             {
               "name": "yDist",
-              "ioValue": 0
+              "ioValue": 1.4,
+              "currentEquation": "1.4"
             },
             {
               "name": "zDist",
               "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.4134114583333333,
+          "y": 0.6371428571428571,
+          "uniqueID": "id-7369",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "height",
+              "ioValue": 10
             }
           ]
         }
@@ -8218,6 +8236,11 @@
           "ap2Name": "geometry",
           "ap1ID": "id-7359",
           "ap2ID": "id-7363"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-7363",
+          "ap2ID": "id-7369"
         }
       ],
       "fileTypeVersion": 1
