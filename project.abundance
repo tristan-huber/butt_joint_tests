@@ -8107,7 +8107,7 @@
           "ioValues": [
             {
               "name": "x",
-              "ioValue": 6.000000300000002
+              "ioValue": 1.5400003
             },
             {
               "name": "y",
@@ -8155,11 +8155,13 @@
           "ioValues": [
             {
               "name": "x length",
-              "ioValue": 1
+              "ioValue": 1,
+              "currentEquation": "1"
             },
             {
               "name": "y length",
-              "ioValue": 1
+              "ioValue": 2,
+              "currentEquation": "2"
             }
           ]
         },
@@ -8175,8 +8177,8 @@
             },
             {
               "name": "xDist",
-              "ioValue": 5.4,
-              "currentEquation": "5.4"
+              "ioValue": 4.4,
+              "currentEquation": "4.4"
             },
             {
               "name": "yDist",
@@ -8201,7 +8203,24 @@
             },
             {
               "name": "height",
-              "ioValue": 10
+              "ioValue": 0.25,
+              "currentEquation": "0.25"
+            }
+          ]
+        },
+        {
+          "atomType": "Difference",
+          "x": 0.62109375,
+          "y": 0.8371428571428572,
+          "uniqueID": "id-7373",
+          "ioValues": [
+            {
+              "name": "retain",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "remove",
+              "ioValue": "__GEOMETRY_INPUT__"
             }
           ]
         }
@@ -8213,14 +8232,14 @@
           "ap2ID": "id-7322"
         },
         {
-          "ap2Name": "geometry",
-          "ap1ID": "id-7318",
-          "ap2ID": "id-7327"
-        },
-        {
           "ap2Name": "number or geometry",
           "ap1ID": "id-7318",
           "ap2ID": "id-7316"
+        },
+        {
+          "ap2Name": "remove",
+          "ap1ID": "id-7318",
+          "ap2ID": "id-7373"
         },
         {
           "ap2Name": "x",
@@ -8241,6 +8260,16 @@
           "ap2Name": "geometry",
           "ap1ID": "id-7363",
           "ap2ID": "id-7369"
+        },
+        {
+          "ap2Name": "retain",
+          "ap1ID": "id-7369",
+          "ap2ID": "id-7373"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-7373",
+          "ap2ID": "id-7327"
         }
       ],
       "fileTypeVersion": 1
