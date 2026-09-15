@@ -5402,6 +5402,7 @@
       "x": 0.6,
       "y": 0.3,
       "uniqueID": "id-4224",
+      "name": "dogbone",
       "ioValues": [
         {
           "name": "geometry",
@@ -5409,7 +5410,7 @@
         }
       ],
       "tags": [
-        ""
+        "dogbone"
       ]
     },
     {
@@ -5446,6 +5447,22 @@
       ],
       "partName": "butt_joint_tests",
       "sortDirection": "Left"
+    },
+    {
+      "atomType": "Tag",
+      "x": 0.6,
+      "y": 0.6,
+      "uniqueID": "id-8279",
+      "name": "stepped scarf",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tags": [
+        "stepped scarf"
+      ]
     },
     {
       "atomType": "Output",
@@ -5572,14 +5589,19 @@
       "ap2ID": "id-2829"
     },
     {
-      "ap2Name": "Shape 4",
+      "ap2Name": "geometry",
       "ap1ID": "id-2622",
-      "ap2ID": "id-1471"
+      "ap2ID": "id-8279"
     },
     {
       "ap2Name": "geometry",
       "ap1ID": "id-1476",
       "ap2ID": "id-2823"
+    },
+    {
+      "ap2Name": "Shape 4",
+      "ap1ID": "id-8279",
+      "ap2ID": "id-1471"
     }
   ],
   "unitsKey": "Inches",
